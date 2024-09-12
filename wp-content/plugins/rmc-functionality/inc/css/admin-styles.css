@@ -1,0 +1,15 @@
+#sort-dropdowns {
+  margin-bottom: 1em;
+}
+
+#reviews-list_wrapper .dt-buttons {
+  float: left;
+}
+
+#reviews-list_wrapper .review-content {
+  display: block;
+  width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

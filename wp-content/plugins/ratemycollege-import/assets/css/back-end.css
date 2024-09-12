@@ -1,0 +1,11 @@
+.ripoc_in .card {
+    max-width: 98%;
+    padding: 0;
+}
+
+.ripoc_in .card .card-body {
+    padding: 15px;
+}
+.ripoc_in button.btn.btn-lg.btn-success {
+    cursor: pointer;
+}

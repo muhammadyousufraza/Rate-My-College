@@ -1,0 +1,100 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact button bottom\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-17 06:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-5.2"
+
+#. Name of the plugin
+msgid "Contact button bottom"
+msgstr ""
+
+#: views/pages/settings.php:65
+msgid "Facebook button background color"
+msgstr ""
+
+#: views/pages/settings.php:52
+msgid "Facebook button settings"
+msgstr ""
+
+#: views/pages/settings.php:57
+msgid "Facebook button text"
+msgstr ""
+
+#: views/pages/settings.php:69
+msgid "Facebook button text color"
+msgstr ""
+
+#: views/pages/settings.php:90
+msgid "Hotline button background color"
+msgstr ""
+
+#: views/pages/settings.php:77
+msgid "Hotline button settings"
+msgstr ""
+
+#: views/pages/settings.php:82
+msgid "Hotline button text"
+msgstr ""
+
+#: views/pages/settings.php:94
+msgid "Hotline button text color"
+msgstr ""
+
+#: views/pages/settings.php:86
+msgid "Hotline Phone number"
+msgstr ""
+
+#. URI of the plugin
+msgid "http://chilitheme.com/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://fcwordpress.net/"
+msgstr ""
+
+#: views/pages/settings.php:61
+msgid "Link fanpage"
+msgstr ""
+
+#: views/pages/settings.php:2
+msgid "Settings"
+msgstr ""
+
+#. Author of the plugin
+msgid "Tung Nguyen"
+msgstr ""
+
+#: views/pages/settings.php:100
+msgid "Update"
+msgstr ""
+
+#: views/pages/settings.php:40
+msgid "Zalo button background color"
+msgstr ""
+
+#: views/pages/settings.php:27
+msgid "Zalo button settings"
+msgstr ""
+
+#: views/pages/settings.php:32
+msgid "Zalo button text"
+msgstr ""
+
+#: views/pages/settings.php:44
+msgid "Zalo button text color"
+msgstr ""
+
+#: views/pages/settings.php:36
+msgid "Zalo Phone number"
+msgstr ""

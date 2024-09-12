@@ -1,0 +1,392 @@
+0000.000 (0) Opened log file at time: Thu, 19 Mar 2020 08:56:22 +0000 on https://www.ratemycollegecoaches.com
+0000.004 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.22 WP: 5.2.4 PHP: 7.1.33-13+0~20200224.34+debian9~1.gbp2471e1 (fpm-fcgi, Linux 1044120.cloudwaysapps.com 4.9.0-11-amd64 #1 SMP Debian 4.9.189-3+deb9u1 (2019-09-20) x86_64) MySQL: 10.1.44-MariaDB-1~stretch WPLANG: en_US Server: Apache/2.4.25 (Debian) safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 15.2M | 2M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.007 (0) Free space on disk containing Updraft's temporary directory: 14548.4 MB
+0000.012 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.016 (0) Semaphore (fd, ratemycollege_options) being initialised
+0000.024 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.031 (0) Set semaphore last lock (fd) time to 2020-03-19 08:56:22
+0000.034 (0) Semaphore lock (fd) complete
+0000.044 (0) Backup run: resumption=0, nonce=a3ecd4beb315, file_nonce=a3ecd4beb315 begun at=1584608182 (0s ago), job type=backup
+0000.051 (0) Scheduling a resumption (1) after 300 seconds (1584608482) in case this run gets aborted
+0000.083 (0) Checking if we have a zip executable available
+0000.087 (0) Testing: /usr/bin/zip
+0000.097 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.100 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.104 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.107 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.111 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.125 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.129 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.133 (0) Working binary zip found: /usr/bin/zip
+0000.141 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.144 (0) Creation of backups of directories: beginning
+0000.154 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.462 (0) Total entities for the zip file: 2059 directories, 11708 files (0 skipped as non-modified), 157.4 MB
+0000.469 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.473 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.480 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.485 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.489 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.493 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (9.1 MB, 11708 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0001.287 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: size is now: 2.30 MB
+0001.294 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 600 files added (on-disk size: 2363.2 KB)
+0001.298 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 700 files added (on-disk size: 2363.2 KB)
+0001.303 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 800 files added (on-disk size: 2363.2 KB)
+0001.307 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 900 files added (on-disk size: 2363.2 KB)
+0001.312 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1000 files added (on-disk size: 2363.2 KB)
+0001.315 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.7 MB, 11708 files batched, 501 (1002) added so far); re-opening (prior size: 2363.2 KB)
+0001.844 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: size is now: 5.10 MB
+0001.854 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1100 files added (on-disk size: 5252.3 KB)
+0001.862 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1200 files added (on-disk size: 5252.3 KB)
+0001.868 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1300 files added (on-disk size: 5252.3 KB)
+0001.875 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1400 files added (on-disk size: 5252.3 KB)
+0001.880 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1500 files added (on-disk size: 5252.3 KB)
+0001.883 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.7 MB, 11708 files batched, 501 (1503) added so far); re-opening (prior size: 5252.3 KB)
+0002.384 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: size is now: 7.80 MB
+0002.393 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1600 files added (on-disk size: 7991.1 KB)
+0002.398 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1700 files added (on-disk size: 7991.1 KB)
+0002.403 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1800 files added (on-disk size: 7991.1 KB)
+0002.407 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 1900 files added (on-disk size: 7991.1 KB)
+0002.414 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2000 files added (on-disk size: 7991.1 KB)
+0002.418 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.5 MB, 11708 files batched, 501 (2004) added so far); re-opening (prior size: 7991.1 KB)
+0002.762 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2100 files added (on-disk size: 8649.5 KB)
+0002.768 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2200 files added (on-disk size: 8649.5 KB)
+0002.775 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2300 files added (on-disk size: 8649.5 KB)
+0002.780 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2400 files added (on-disk size: 8649.5 KB)
+0002.784 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2500 files added (on-disk size: 8649.5 KB)
+0002.787 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.5 MB, 11708 files batched, 501 (2505) added so far); re-opening (prior size: 8649.5 KB)
+0003.369 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2600 files added (on-disk size: 10002.1 KB)
+0003.376 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2700 files added (on-disk size: 10002.1 KB)
+0003.381 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2800 files added (on-disk size: 10002.1 KB)
+0003.385 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 2900 files added (on-disk size: 10002.1 KB)
+0003.392 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3000 files added (on-disk size: 10002.1 KB)
+0003.396 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.7 MB, 11708 files batched, 501 (3006) added so far); re-opening (prior size: 10002.1 KB)
+0003.934 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: size is now: 11.80 MB
+0003.941 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3100 files added (on-disk size: 12094.4 KB)
+0003.946 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3200 files added (on-disk size: 12094.4 KB)
+0003.950 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3300 files added (on-disk size: 12094.4 KB)
+0003.955 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3400 files added (on-disk size: 12094.4 KB)
+0003.959 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3500 files added (on-disk size: 12094.4 KB)
+0003.963 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (14.3 MB, 11708 files batched, 501 (3507) added so far); re-opening (prior size: 12094.4 KB)
+0005.329 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: size is now: 16.40 MB
+0005.337 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3600 files added (on-disk size: 16768.5 KB)
+0005.342 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3700 files added (on-disk size: 16768.5 KB)
+0005.347 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3800 files added (on-disk size: 16768.5 KB)
+0005.353 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 3900 files added (on-disk size: 16768.5 KB)
+0005.360 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4000 files added (on-disk size: 16768.5 KB)
+0005.363 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (16.9 MB, 11708 files batched, 501 (4008) added so far); re-opening (prior size: 16768.5 KB)
+0006.278 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4100 files added (on-disk size: 18899.3 KB)
+0006.283 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4200 files added (on-disk size: 18899.3 KB)
+0006.288 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4300 files added (on-disk size: 18899.3 KB)
+0006.295 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4400 files added (on-disk size: 18899.3 KB)
+0006.300 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4500 files added (on-disk size: 18899.3 KB)
+0006.304 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (13.4 MB, 11708 files batched, 501 (4509) added so far); re-opening (prior size: 18899.3 KB)
+0007.559 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: size is now: 22.90 MB
+0007.569 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4600 files added (on-disk size: 23499.4 KB)
+0007.577 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4700 files added (on-disk size: 23499.4 KB)
+0007.582 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4800 files added (on-disk size: 23499.4 KB)
+0007.591 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 4900 files added (on-disk size: 23499.4 KB)
+0007.598 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5000 files added (on-disk size: 23499.4 KB)
+0007.602 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.3 MB, 11708 files batched, 501 (5010) added so far); re-opening (prior size: 23499.4 KB)
+0008.274 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5100 files added (on-disk size: 25407.6 KB)
+0008.281 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5200 files added (on-disk size: 25407.6 KB)
+0008.287 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5300 files added (on-disk size: 25407.6 KB)
+0008.293 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5400 files added (on-disk size: 25407.6 KB)
+0008.299 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5500 files added (on-disk size: 25407.6 KB)
+0008.303 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.4 MB, 11708 files batched, 501 (5511) added so far); re-opening (prior size: 25407.6 KB)
+0008.771 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5600 files added (on-disk size: 26519.1 KB)
+0008.776 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5700 files added (on-disk size: 26519.1 KB)
+0008.782 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5800 files added (on-disk size: 26519.1 KB)
+0008.788 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 5900 files added (on-disk size: 26519.1 KB)
+0008.795 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6000 files added (on-disk size: 26519.1 KB)
+0008.801 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.8 MB, 11708 files batched, 501 (6012) added so far); re-opening (prior size: 26519.1 KB)
+0009.308 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6100 files added (on-disk size: 27266.4 KB)
+0009.314 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6200 files added (on-disk size: 27266.4 KB)
+0009.319 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6300 files added (on-disk size: 27266.4 KB)
+0009.326 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6400 files added (on-disk size: 27266.4 KB)
+0009.333 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6500 files added (on-disk size: 27266.4 KB)
+0009.337 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (18.5 MB, 11708 files batched, 501 (6513) added so far); re-opening (prior size: 27266.4 KB)
+0010.761 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6600 files added (on-disk size: 32381 KB)
+0010.767 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6700 files added (on-disk size: 32381 KB)
+0010.772 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6800 files added (on-disk size: 32381 KB)
+0010.777 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 6900 files added (on-disk size: 32381 KB)
+0010.782 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7000 files added (on-disk size: 32381 KB)
+0010.786 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.3 MB, 11708 files batched, 501 (7014) added so far); re-opening (prior size: 32381 KB)
+0011.259 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7100 files added (on-disk size: 32896.4 KB)
+0011.265 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7200 files added (on-disk size: 32896.4 KB)
+0011.271 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7300 files added (on-disk size: 32896.4 KB)
+0011.276 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7400 files added (on-disk size: 32896.4 KB)
+0011.283 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7500 files added (on-disk size: 32896.4 KB)
+0011.287 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.4 MB, 11708 files batched, 501 (7515) added so far); re-opening (prior size: 32896.4 KB)
+0011.902 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7600 files added (on-disk size: 33812.1 KB)
+0011.908 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7700 files added (on-disk size: 33812.1 KB)
+0011.914 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7800 files added (on-disk size: 33812.1 KB)
+0011.919 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 7900 files added (on-disk size: 33812.1 KB)
+0011.925 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8000 files added (on-disk size: 33812.1 KB)
+0011.928 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.2 MB, 11708 files batched, 501 (8016) added so far); re-opening (prior size: 33812.1 KB)
+0012.457 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8100 files added (on-disk size: 34813.9 KB)
+0012.462 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8200 files added (on-disk size: 34813.9 KB)
+0012.467 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8300 files added (on-disk size: 34813.9 KB)
+0012.472 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8400 files added (on-disk size: 34813.9 KB)
+0012.477 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8500 files added (on-disk size: 34813.9 KB)
+0012.481 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7 MB, 11708 files batched, 501 (8517) added so far); re-opening (prior size: 34813.9 KB)
+0013.265 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8600 files added (on-disk size: 36689.4 KB)
+0013.272 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8700 files added (on-disk size: 36689.4 KB)
+0013.279 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8800 files added (on-disk size: 36689.4 KB)
+0013.284 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 8900 files added (on-disk size: 36689.4 KB)
+0013.291 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9000 files added (on-disk size: 36689.4 KB)
+0013.296 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.6 MB, 11708 files batched, 501 (9018) added so far); re-opening (prior size: 36689.4 KB)
+0013.800 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9100 files added (on-disk size: 37723.4 KB)
+0013.806 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9200 files added (on-disk size: 37723.4 KB)
+0013.811 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9300 files added (on-disk size: 37723.4 KB)
+0013.816 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9400 files added (on-disk size: 37723.4 KB)
+0013.823 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9500 files added (on-disk size: 37723.4 KB)
+0013.829 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.6 MB, 11708 files batched, 501 (9519) added so far); re-opening (prior size: 37723.4 KB)
+0014.425 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9600 files added (on-disk size: 38861.3 KB)
+0014.430 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9700 files added (on-disk size: 38861.3 KB)
+0014.436 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9800 files added (on-disk size: 38861.3 KB)
+0014.441 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 9900 files added (on-disk size: 38861.3 KB)
+0014.448 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10000 files added (on-disk size: 38861.3 KB)
+0014.453 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (12 MB, 11708 files batched, 501 (10020) added so far); re-opening (prior size: 38861.3 KB)
+0015.763 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10100 files added (on-disk size: 42127.2 KB)
+0015.770 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10200 files added (on-disk size: 42127.2 KB)
+0015.776 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10300 files added (on-disk size: 42127.2 KB)
+0015.781 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10400 files added (on-disk size: 42127.2 KB)
+0015.786 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10500 files added (on-disk size: 42127.2 KB)
+0015.793 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (9.1 MB, 11708 files batched, 501 (10521) added so far); re-opening (prior size: 42127.2 KB)
+0016.777 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10600 files added (on-disk size: 46402.4 KB)
+0016.783 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10700 files added (on-disk size: 46402.4 KB)
+0016.789 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10800 files added (on-disk size: 46402.4 KB)
+0016.795 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 10900 files added (on-disk size: 46402.4 KB)
+0016.800 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 11000 files added (on-disk size: 46402.4 KB)
+0016.805 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.8 MB, 11708 files batched, 501 (11022) added so far); re-opening (prior size: 46402.4 KB)
+0017.516 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 11100 files added (on-disk size: 48137.3 KB)
+0017.522 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 11200 files added (on-disk size: 48137.3 KB)
+0017.528 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 11300 files added (on-disk size: 48137.3 KB)
+0017.533 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 11400 files added (on-disk size: 48137.3 KB)
+0017.538 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 11500 files added (on-disk size: 48137.3 KB)
+0017.541 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.6 MB, 11708 files batched, 501 (11523) added so far); re-opening (prior size: 48137.3 KB)
+0018.042 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 11600 files added (on-disk size: 48776.6 KB)
+0018.049 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip.tmp: 11700 files added (on-disk size: 48776.6 KB)
+0019.565 (0) Created plugins zip (0) - 49963.9 KB in 19.4 s (2574.6 KB/s) (sha1: bd054a71c7b88c3085581e8b0b09893687653d32, sha256: 4f54289ee95ef28f46f4c2285ae087b4ce01f81df3d790f0751e45471b387c61)
+0019.573 (0) Beginning creation of dump of themes (split every: 400 MB)
+0019.628 (0) Total entities for the zip file: 90 directories, 665 files (0 skipped as non-modified), 14.5 MB
+0019.635 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0019.643 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0019.650 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0019.659 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0019.666 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0019.671 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.9 MB, 665 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0020.084 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip.tmp: size is now: 1.80 MB
+0020.101 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip.tmp: 600 files added (on-disk size: 1825.7 KB)
+0020.735 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip.tmp: size is now: 5.50 MB
+0020.849 (0) Created themes zip (0) - 5681.4 KB in 1.3 s (4467 KB/s) (sha1: dc651cc1795d6a46296f3bb96c2b973f0f9b5cf3, sha256: de4836bd445cbcc41e5d4f74436922e2c457a55aa3aea7debd9593573a95b9f2)
+0020.857 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0020.862 (0) Looking for candidates to backup in: /home/1044120.cloudwaysapps.com/gzrgqrambv/public_html/wp-content/uploads
+0020.868 (0) finding files: ratemycollege-import (3).xlsx: adding to list (1)
+0020.873 (0) finding files: revslider: adding to list (2)
+0020.877 (0) finding files: pb_backupbuddy: adding to list (3)
+0020.881 (0) finding files: 2019: adding to list (4)
+0020.885 (0) finding files: elementor: adding to list (5)
+0020.889 (0) finding files: wpallimport: adding to list (6)
+0020.893 (0) finding files: bb-plugin: adding to list (7)
+0020.897 (0) finding files: Rate My College Coaches Database.xlsx: adding to list (8)
+0020.903 (0) finding files: wp-migrate-db: adding to list (9)
+0020.906 (0) finding files: 2020: adding to list (10)
+0020.908 (0) finding files: backupbuddy_backups: skipping: excluded by options (glob)
+0020.913 (0) finding files: backupbuddy_backups: skipping: excluded by options (glob)
+0020.913 (0) finding files: ratemycollege-import (4).xlsx: adding to list (11)
+0020.919 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0021.173 (0) Total entities for the zip file: 445 directories, 1676 files (0 skipped as non-modified), 266.1 MB
+0021.182 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0021.187 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0021.192 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 300 files added (on-disk size: 0 KB)
+0021.198 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 400 files added (on-disk size: 0 KB)
+0021.205 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 500 files added (on-disk size: 0 KB)
+0021.209 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5 MB, 1676 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0021.611 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: size is now: 5.10 MB
+0021.627 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 600 files added (on-disk size: 5227.3 KB)
+0021.634 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 700 files added (on-disk size: 5227.3 KB)
+0021.640 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 800 files added (on-disk size: 5227.3 KB)
+0021.646 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 900 files added (on-disk size: 5227.3 KB)
+0021.651 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (26.6 MB, 1676 files batched, 435 (936) added so far); re-opening (prior size: 5227.3 KB)
+0022.361 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: size is now: 28.90 MB
+0022.369 (0) A useful amount of data was added after this amount of zip processing: 1.2 s (normalised: 1.2 s, rate: 22113.7 KB/s)
+0022.379 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.2314651012421, normalised_time=1.1576534753037, max_time=22.373954057693, data points known=1, old_max_bytes=26214400, new_max_bytes=209715200)
+0022.390 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 1000 files added (on-disk size: 29591.9 KB)
+0022.396 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 1100 files added (on-disk size: 29591.9 KB)
+0022.403 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 1200 files added (on-disk size: 29591.9 KB)
+0022.412 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 1300 files added (on-disk size: 29591.9 KB)
+0022.420 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 1400 files added (on-disk size: 29591.9 KB)
+0022.425 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (194.2 MB, 1676 files batched, 501 (1437) added so far); re-opening (prior size: 29591.9 KB)
+0026.771 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: size is now: 111.70 MB
+0026.781 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 1500 files added (on-disk size: 114382 KB)
+0026.786 (0) Zip: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: 1600 files added (on-disk size: 114382 KB)
+0028.123 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip.tmp: size is now: 151.90 MB
+0030.135 (0) Created uploads zip (0) - 155546.9 KB in 9.2 s (16886.7 KB/s) (sha1: 42d39a8e59ae26c9fa1f54864927119331e16371, sha256: 811698a43cea1aaa0aa1d9ed1a83bc5dcf81bf969476b4eb424c2eadc60760f4)
+0030.144 (0) Beginning backup of other directories found in the content directory (index: 0)
+0030.148 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0030.151 (0) Looking for candidates to backup in: /home/1044120.cloudwaysapps.com/gzrgqrambv/public_html/wp-content
+0030.154 (0) finding files: mu-plugins: adding to list (1)
+0030.156 (0) finding files: updraft: skipping: this is the updraft directory
+0030.159 (0) finding files: debug.log: skipping: excluded by options
+0030.162 (0) finding files: cache: skipping: excluded by options
+0030.164 (0) finding files: breeze-config: adding to list (2)
+0030.167 (0) finding files: uploads: skipping: this is the uploads directory
+0030.170 (0) finding files: index.php: adding to list (3)
+0030.172 (0) finding files: plugins: skipping: this is the plugins directory
+0030.175 (0) finding files: advanced-cache.php: adding to list (4)
+0030.179 (0) finding files: themes: skipping: this is the themes directory
+0030.182 (0) finding files: upgrade: skipping: excluded by options
+0030.184 (0) finding files: db.php: adding to list (5)
+0030.195 (0) Unexpected: path (db.php) fails both is_file() and is_dir()
+0030.199 (0) Total entities for the zip file: 2 directories, 4 files (0 skipped as non-modified), 0 MB
+0030.216 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-others.zip.tmp: size is now: 0.00 MB
+0030.228 (0) Created others zip (0) - 2.2 KB in 0 s (54.4 KB/s) (sha1: a9ba4225f0ccd3b16111137237746c2b3d7ba880, sha256: 366b525903e6aa63325f0a4cf0500ac6046cf11665772560c1dfd0d0bf7cb686)
+0030.245 (0) Saving backup status to database (elements: 8)
+0030.253 (0) Beginning creation of database dump (WordPress DB)
+0030.268 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+0030.341 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `ratemycollege_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = u (truncated - 1261 bytes total)
+0030.349 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0030.366 (0) Table ratemycollege_options: Total expected rows (approximate): 359
+0030.447 (0) Table ratemycollege_options: Total rows added: 363 in 0.08 seconds
+0030.451 (0) Table ratemycollege_options: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_options.table.gz - 255.5 KB)
+0030.465 (0) Table ratemycollege_users: Total expected rows (approximate): 10
+0030.472 (0) Table ratemycollege_users: Total rows added: 10 in 0.00 seconds
+0030.476 (0) Table ratemycollege_users: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_users.table.gz - 1.4 KB)
+0030.490 (0) Table ratemycollege_usermeta: Total expected rows (approximate): 377
+0030.498 (0) Table ratemycollege_usermeta: Total rows added: 377 in 0.00 seconds
+0030.502 (0) Table ratemycollege_usermeta: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_usermeta.table.gz - 9.4 KB)
+0030.515 (0) Table ratemycollege_commentmeta: Total expected rows (approximate): 0
+0030.521 (0) Table ratemycollege_commentmeta: Total rows added: 0 in 0.00 seconds
+0030.525 (0) Table ratemycollege_commentmeta: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_commentmeta.table.gz - 0.4 KB)
+0030.536 (0) Table ratemycollege_comments: Total expected rows (approximate): 1
+0030.541 (0) Table ratemycollege_comments: Total rows added: 1 in 0.00 seconds
+0030.545 (0) Table ratemycollege_comments: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_comments.table.gz - 0.7 KB)
+0030.559 (0) Table ratemycollege_links: Total expected rows (approximate): 0
+0030.565 (0) Table ratemycollege_links: Total rows added: 0 in 0.00 seconds
+0030.569 (0) Table ratemycollege_links: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_links.table.gz - 0.4 KB)
+0030.580 (0) Table ratemycollege_postmeta: Total expected rows (approximate): 108644
+0031.153 (0) Table ratemycollege_postmeta: binary mysqldump finished (writes: 41) in 0.57 seconds
+0031.157 (0) Table ratemycollege_postmeta: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_postmeta.table.gz - 1269.1 KB)
+0031.169 (0) Table ratemycollege_posts: Total expected rows (approximate): 23538
+0031.730 (0) Table ratemycollege_posts: binary mysqldump finished (writes: 61) in 0.56 seconds
+0031.734 (0) Table ratemycollege_posts: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_posts.table.gz - 1283.5 KB)
+0031.747 (0) Table ratemycollege_term_relationships: Total expected rows (approximate): 68092
+0031.874 (0) Table ratemycollege_term_relationships: binary mysqldump finished (writes: 30) in 0.12 seconds
+0031.878 (0) Table ratemycollege_term_relationships: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_term_relationships.table.gz - 166.1 KB)
+0031.888 (0) Table ratemycollege_term_taxonomy: Total expected rows (approximate): 223
+0031.894 (0) Table ratemycollege_term_taxonomy: Total rows added: 223 in 0.00 seconds
+0031.899 (0) Table ratemycollege_term_taxonomy: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_term_taxonomy.table.gz - 1.9 KB)
+0031.912 (0) Table ratemycollege_termmeta: Total expected rows (approximate): 44
+0031.919 (0) Table ratemycollege_termmeta: Total rows added: 44 in 0.00 seconds
+0031.923 (0) Table ratemycollege_termmeta: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_termmeta.table.gz - 0.7 KB)
+0031.935 (0) Table ratemycollege_terms: Total expected rows (approximate): 223
+0031.941 (0) Table ratemycollege_terms: Total rows added: 223 in 0.00 seconds
+0031.945 (0) Table ratemycollege_terms: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_terms.table.gz - 3.2 KB)
+0031.958 (0) Table ratemycollege_yoast_seo_links: Total expected rows (approximate): 116
+0031.966 (0) Table ratemycollege_yoast_seo_links: Total rows added: 116 in 0.00 seconds
+0031.970 (0) Table ratemycollege_yoast_seo_links: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_yoast_seo_links.table.gz - 3.4 KB)
+0031.983 (0) Table ratemycollege_yoast_seo_meta: Total expected rows (approximate): 132
+0031.990 (0) Table ratemycollege_yoast_seo_meta: Total rows added: 132 in 0.00 seconds
+0031.995 (0) Table ratemycollege_yoast_seo_meta: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_yoast_seo_meta.table.gz - 0.7 KB)
+0032.007 (0) Table ratemycollege_coach_rate: Total expected rows (approximate): 6
+0032.013 (0) Table ratemycollege_coach_rate: Total rows added: 6 in 0.00 seconds
+0032.018 (0) Table ratemycollege_coach_rate: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_coach_rate.table.gz - 1.6 KB)
+0032.029 (0) Table ratemycollege_pmxi_files: Total expected rows (approximate): 1
+0032.034 (0) Table ratemycollege_pmxi_files: Total rows added: 1 in 0.00 seconds
+0032.038 (0) Table ratemycollege_pmxi_files: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_files.table.gz - 0.5 KB)
+0032.049 (0) Table ratemycollege_pmxi_history: Total expected rows (approximate): 4
+0032.056 (0) Table ratemycollege_pmxi_history: Total rows added: 5 in 0.00 seconds
+0032.060 (0) Table ratemycollege_pmxi_history: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_history.table.gz - 0.6 KB)
+0032.072 (0) Table ratemycollege_pmxi_images: Total expected rows (approximate): 80
+0032.076 (0) Table ratemycollege_pmxi_images: Total rows added: 80 in 0.00 seconds
+0032.080 (0) Table ratemycollege_pmxi_images: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_images.table.gz - 1.9 KB)
+0032.093 (0) Table ratemycollege_pmxi_imports: Total expected rows (approximate): 0
+0032.101 (0) Table ratemycollege_pmxi_imports: Total rows added: 1 in 0.00 seconds
+0032.106 (0) Table ratemycollege_pmxi_imports: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_imports.table.gz - 2.9 KB)
+0032.119 (0) Table ratemycollege_pmxi_posts: Total expected rows (approximate): 2125
+0032.146 (0) Table ratemycollege_pmxi_posts: Total rows added: 2125 in 0.02 seconds
+0032.151 (0) Table ratemycollege_pmxi_posts: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_posts.table.gz - 28.5 KB)
+0032.164 (0) Table ratemycollege_pmxi_templates: Total expected rows (approximate): 0
+0032.169 (0) Table ratemycollege_pmxi_templates: Total rows added: 0 in 0.00 seconds
+0032.173 (0) Table ratemycollege_pmxi_templates: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_templates.table.gz - 0.4 KB)
+0032.185 (0) Table ratemycollege_revslider_css: Total expected rows (approximate): 109
+0032.196 (0) Table ratemycollege_revslider_css: Total rows added: 109 in 0.01 seconds
+0032.199 (0) Table ratemycollege_revslider_css: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_css.table.gz - 4.8 KB)
+0032.209 (0) Table ratemycollege_revslider_layer_animations: Total expected rows (approximate): 0
+0032.214 (0) Table ratemycollege_revslider_layer_animations: Total rows added: 0 in 0.00 seconds
+0032.218 (0) Table ratemycollege_revslider_layer_animations: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_layer_animations.table.gz - 0.3 KB)
+0032.230 (0) Table ratemycollege_revslider_navigations: Total expected rows (approximate): 0
+0032.235 (0) Table ratemycollege_revslider_navigations: Total rows added: 0 in 0.00 seconds
+0032.239 (0) Table ratemycollege_revslider_navigations: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_navigations.table.gz - 0.3 KB)
+0032.251 (0) Table ratemycollege_revslider_sliders: Total expected rows (approximate): 1
+0032.258 (0) Table ratemycollege_revslider_sliders: Total rows added: 1 in 0.00 seconds
+0032.262 (0) Table ratemycollege_revslider_sliders: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_sliders.table.gz - 3.1 KB)
+0032.273 (0) Table ratemycollege_revslider_slides: Total expected rows (approximate): 6
+0032.281 (0) Table ratemycollege_revslider_slides: Total rows added: 6 in 0.00 seconds
+0032.285 (0) Table ratemycollege_revslider_slides: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_slides.table.gz - 4.9 KB)
+0032.300 (0) Table ratemycollege_revslider_static_slides: Total expected rows (approximate): 1
+0032.307 (0) Table ratemycollege_revslider_static_slides: Total rows added: 1 in 0.00 seconds
+0032.310 (0) Table ratemycollege_revslider_static_slides: finishing file (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_static_slides.table.gz - 0.4 KB)
+0032.319 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_options.table.gz (1/27): adding to final database dump
+0032.390 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_users.table.gz (2/27): adding to final database dump
+0032.395 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_usermeta.table.gz (3/27): adding to final database dump
+0032.401 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_commentmeta.table.gz (4/27): adding to final database dump
+0032.405 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_comments.table.gz (5/27): adding to final database dump
+0032.409 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_links.table.gz (6/27): adding to final database dump
+0032.412 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_postmeta.table.gz (7/27): adding to final database dump
+0032.891 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_posts.table.gz (8/27): adding to final database dump
+0033.310 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_term_relationships.table.gz (9/27): adding to final database dump
+0033.361 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_term_taxonomy.table.gz (10/27): adding to final database dump
+0033.366 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_termmeta.table.gz (11/27): adding to final database dump
+0033.370 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_terms.table.gz (12/27): adding to final database dump
+0033.373 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_yoast_seo_links.table.gz (13/27): adding to final database dump
+0033.379 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_yoast_seo_meta.table.gz (14/27): adding to final database dump
+0033.383 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_coach_rate.table.gz (15/27): adding to final database dump
+0033.387 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_files.table.gz (16/27): adding to final database dump
+0033.390 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_history.table.gz (17/27): adding to final database dump
+0033.392 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_images.table.gz (18/27): adding to final database dump
+0033.396 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_imports.table.gz (19/27): adding to final database dump
+0033.400 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_posts.table.gz (20/27): adding to final database dump
+0033.415 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_pmxi_templates.table.gz (21/27): adding to final database dump
+0033.419 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_css.table.gz (22/27): adding to final database dump
+0033.426 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_layer_animations.table.gz (23/27): adding to final database dump
+0033.430 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_navigations.table.gz (24/27): adding to final database dump
+0033.433 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_sliders.table.gz (25/27): adding to final database dump
+0033.437 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_slides.table.gz (26/27): adding to final database dump
+0033.442 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db-table-ratemycollege_revslider_static_slides.table.gz (27/27): adding to final database dump
+0033.447 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db.gz: finished writing out complete database file (3032 KB)
+0033.506 (0) Total database tables backed up: 27 (backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db.gz, size: 3114495, sha1: 1349f8bafc84035103d215d1067ad5d652571f99, sha256: d26b27bbcda1b7da3a7e48cdc058a37ea7d305497bbad49732895cfe48942409)
+0033.520 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0033.523 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0033.526 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0033.528 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-others.zip: others: This file has not yet been successfully uploaded: will queue
+0033.531 (0) backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db.gz: db: This file has not yet been successfully uploaded: will queue
+0033.535 (0) Saving backup history. Total backup size: 209.2 MB
+0033.543 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0033.554 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0033.556 (0) No remote despatch: user chose no remote backup service
+0033.559 (0) Recording as successfully uploaded: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-plugins.zip
+0033.564 (0) Recording as successfully uploaded: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-themes.zip
+0033.573 (0) Recording as successfully uploaded: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-uploads.zip
+0033.582 (0) Recording as successfully uploaded: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-others.zip
+0033.591 (0) Recording as successfully uploaded: backup_2020-03-19-0856_Rate_My_College_a3ecd4beb315-db.gz
+0033.606 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0033.610 (0) Number of backup sets in history: 1; groups (db): 1
+0033.614 (0) Examining (for databases) backup set with group_id=0, nonce=a3ecd4beb315, datestamp=1584608182 (Mar 19 2020 08:56:22)
+0033.617 (0) This backup set is the backup set just made, so will not be deleted.
+0033.617 (0) Number of backup sets in history: 1; groups (files): 1
+0033.620 (0) Examining (for files) backup set with nonce=a3ecd4beb315, datestamp=1584608182 (Mar 19 2020 08:56:22)
+0033.620 (0) This backup set is the backup set just made, so will not be deleted.
+0033.623 (0) This backup set is the backup set just made, so will not be deleted.
+0033.623 (0) This backup set is the backup set just made, so will not be deleted.
+0033.623 (0) This backup set is the backup set just made, so will not be deleted.
+0033.623 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0033.626 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0033.633 (0) Resume backup (a3ecd4beb315, 0): finish run
+0033.643 (0) Decremented the semaphore (fd) by 1
+0033.647 (0) Semaphore (fd) unlocked
+0033.650 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0033.661 (0) No email will/can be sent - the user has not configured an email address.
+0033.664 (0) The backup apparently succeeded and is now complete

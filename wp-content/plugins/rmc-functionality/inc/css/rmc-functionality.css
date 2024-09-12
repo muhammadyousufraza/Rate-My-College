@@ -1,0 +1,191 @@
+input.ui-autocomplete-loading {
+  background: white url("../images/loader.gif") 95% center no-repeat;
+}
+
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+/* Shortcode Styles */
+
+.content-break {
+  width: 100%;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  padding: 30px;
+  margin: 30px 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.content-break strong {
+  color: #e93e22;
+}
+
+/* Podcasts Page */
+
+#podcast-embed-wrap {
+  position: relative;
+  padding-top: 56.25%;
+  margin-bottom: 2rem;
+  background-color: #000;
+}
+
+#podcast-embed-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body .podcast-list {
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+body .podcast-list li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body .podcast-list li a {
+  padding: 0.5rem;
+  display: block;
+  background-color: #182035;
+  margin-bottom: 0.5rem;
+  border-left: 6px solid #e93e22;
+  border-top: 1px solid #182035;
+  border-bottom: 1px solid #182035;
+  border-right: 1px solid #182035;
+  color: #fff;
+}
+
+body .podcast-list li a:not(.active):hover {
+  opacity: 0.4;
+}
+
+body .podcast-list li a span {
+  display: block;
+  font-size: 0.7rem;
+  pointer-events: none;
+}
+
+body .podcast-list li a.active {
+  background-color: #fff;
+  color: #182035;
+  padding-left: 1rem;
+}
+
+.podcast-links {
+  border: 1px solid #182035;
+  padding: 2rem;
+  text-align: center;
+}
+
+.podcast-links .links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.podcast-links a {
+  display: block;
+  height: 80px;
+  min-width: 200px;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+.podcast-links a img {
+  width: auto;
+  max-height: 100%;
+  display: block;
+  margin: 0 0.5rem;
+}
+
+.podcast-links a:hover {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 500px) {
+  .podcast-links {
+    padding: 0.5rem;
+  }
+
+  .podcast-links a {
+    height: auto;
+  }
+
+  .podcast-links a img {
+    margin: 0;
+  }
+}
+
+/* Heroes */
+.hero-slider {
+  height: 50vh;
+}
+
+.hero-slider .slide {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.hero-slider .slide img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-slider .slide .text-wrap {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  left: 50%;
+  bottom: 5vh;
+  transform: translate(-50%);
+  z-index: 10;
+}
+
+.hero-slider .slide .text {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 57px;
+  font-weight: 300;
+  line-height: 1;
+  padding: 1rem;
+  display: inline-block;
+}
+
+/* Overrides */
+
+body .coaches-profile-right-in-box-title {
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+body .coaches-profile-right-in-box-title h2 {
+  line-height: 1.2;
+}
+
+body .coaches-profile-right-in-box-title h2 .school-name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}

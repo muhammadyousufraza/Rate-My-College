@@ -1,0 +1,85 @@
+{"event":"message","time":1571388557,"u":"21","run":"11.20","mem":"12.47","data":"Pong! Server replied."}
+{"event":"details","time":1571388557,"u":"27","run":"23.76","mem":"12.28","data":"Working... Dumped `56500` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388557,"u":"42","run":"23.91","mem":"12.28","data":"Working... Dumped `57000` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388557,"u":"43","run":"23.92","mem":"12.28","data":"Pinging mysqli."}
+{"event":"details","time":1571388557,"u":"43","run":"23.92","mem":"12.28","data":"Database Server connection status verified."}
+{"event":"details","time":1571388557,"u":"62","run":"24.11","mem":"15.73","data":"Got `1000` rows from `ratemycollege_postmeta` of `1000` max."}
+{"event":"details","time":1571388557,"u":"86","run":"24.35","mem":"15.74","data":"Working... Dumped `57500` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388558,"u":"01","run":"24.50","mem":"15.74","data":"Working... Dumped `58000` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388558,"u":"01","run":"24.51","mem":"15.74","data":"Pinging mysqli."}
+{"event":"details","time":1571388558,"u":"02","run":"24.51","mem":"15.74","data":"Database Server connection status verified."}
+{"event":"details","time":1571388558,"u":"29","run":"24.79","mem":"12.28","data":"Got `1000` rows from `ratemycollege_postmeta` of `1000` max."}
+{"event":"details","time":1571388558,"u":"41","run":"24.90","mem":"12.29","data":"Working... Dumped `58500` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388558,"u":"51","run":"25.00","mem":"12.29","data":"Working... Dumped `59000` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388558,"u":"52","run":"25.01","mem":"12.29","data":"Pinging mysqli."}
+{"event":"details","time":1571388558,"u":"52","run":"25.01","mem":"12.29","data":"Database Server connection status verified."}
+{"event":"details","time":1571388558,"u":"63","run":"25.12","mem":"12.28","data":"Got `1000` rows from `ratemycollege_postmeta` of `1000` max."}
+{"event":"details","time":1571388558,"u":"73","run":"25.22","mem":"12.29","data":"Working... Dumped `59500` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388558,"u":"86","run":"25.35","mem":"12.29","data":"Working... Dumped `60000` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388558,"u":"86","run":"25.35","mem":"12.29","data":"Pinging mysqli."}
+{"event":"details","time":1571388558,"u":"87","run":"25.36","mem":"12.29","data":"Database Server connection status verified."}
+{"event":"details","time":1571388559,"u":"04","run":"25.53","mem":"12.78","data":"Got `1000` rows from `ratemycollege_postmeta` of `1000` max."}
+{"event":"details","time":1571388559,"u":"23","run":"25.72","mem":"12.79","data":"Working... Dumped `60500` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388559,"u":"34","run":"25.84","mem":"12.79","data":"Working... Dumped `61000` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388559,"u":"35","run":"25.84","mem":"12.79","data":"Pinging mysqli."}
+{"event":"details","time":1571388559,"u":"35","run":"25.84","mem":"12.79","data":"Database Server connection status verified."}
+{"event":"details","time":1571388559,"u":"48","run":"25.97","mem":"12.78","data":"Got `1000` rows from `ratemycollege_postmeta` of `1000` max."}
+{"event":"details","time":1571388559,"u":"59","run":"26.08","mem":"12.79","data":"Working... Dumped `61500` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388559,"u":"71","run":"26.20","mem":"12.79","data":"Working... Dumped `62000` rows from `ratemycollege_postmeta` so far."}
+{"event":"details","time":1571388559,"u":"71","run":"26.20","mem":"12.79","data":"Approaching limit of available PHP chunking time of `30` sec. PHP ran for 26.203 sec, database dumping ran for 24.354 sec having dumped `62000` rows. Proceeding to use chunking on remaining tables: ratemycollege_postmeta"}
+{"event":"details","time":1571388559,"u":"72","run":"26.21","mem":"12.39","data":"mysqlbuddy: Dump method `php` is using chunking."}
+{"event":"details","time":1571388559,"u":"73","run":"26.22","mem":"12.41","data":"Fileoptions `fq71ihpsv4.txt` saved. 9256 bytes written."}
+{"event":"details","time":1571388559,"u":"73","run":"26.23","mem":"12.39","data":"Inserted additional database dump step at `4` to resume at row `170000`. The next chunk will proceed shortly."}
+{"event":"details","time":1571388559,"u":"75","run":"26.24","mem":"12.41","data":"Fileoptions `fq71ihpsv4.txt` saved. 9276 bytes written."}
+{"event":"details","time":1571388559,"u":"75","run":"26.24","mem":"12.40","data":"Finished function `backup_create_database_dump`. Peak memory usage: 16.262 MB with BackupBuddy v8.0.1.4"}
+{"event":"finishFunction","time":1571388559,"u":"75","run":"26.25","mem":"12.40","data":"{\"function\":\"backup_create_database_dump\"}"}
+{"event":"details","time":1571388559,"u":"76","run":"26.25","mem":"12.40","data":"-----"}
+{"event":"details","time":1571388559,"u":"76","run":"26.25","mem":"12.40","data":"Closing & unlocking fileoptions."}
+{"event":"warnings","time":1571388559,"u":"77","run":"26.26","mem":"12.39","data":"Warning #438943984983. This warning may be okay and ignored. $this->_backup still appears to be set. Still a fileoptions object? May result in race condition issues if fileoptions still open and\/or locked. Set = empty string to verify it shuts down properly prior to calling this function."}
+{"event":"details","time":1571388559,"u":"78","run":"26.27","mem":"12.39","data":"Scheduling Cron for `fq71ihpsv4`."}
+{"event":"details","time":1571388559,"u":"79","run":"26.29","mem":"12.39","data":"Database kicker loaded. Database object class: `wpdb` with database of type `mysqli`."}
+{"event":"details","time":1571388559,"u":"80","run":"26.29","mem":"12.39","data":"Pinging mysqli."}
+{"event":"details","time":1571388559,"u":"81","run":"26.30","mem":"12.39","data":"Database Server connection status verified."}
+{"event":"details","time":1571388559,"u":"81","run":"26.30","mem":"12.39","data":"Scheduling next step to run at `1571388559` (localized time: Oct 18, 2019 8:49:19 am), pushed to the top, with cron tag `backupbuddy_cron` to run method `process_backup` and serial arguments `fq71ihpsv4`."}
+{"event":"details","time":1571388559,"u":"82","run":"26.31","mem":"11.68","data":"Next step scheduled."}
+{"event":"startAction","time":1571388559,"u":"82","run":"26.31","mem":"11.68","data":"cronPass"}
+{"event":"cronParams","time":1571388559,"u":"83","run":"26.32","mem":"11.68","data":"eyJ0aW1lIjoxNTcxMzg4NTU5LCJ0YWciOiJiYWNrdXBidWRkeV9jcm9uIiwibWV0aG9kIjoicHJvY2Vzc19iYWNrdXAiLCJhcmdzIjpbImZxNzFpaHBzdjQiXX0="}
+{"event":"details","time":1571388559,"u":"84","run":"26.33","mem":"11.67","data":"Not calling spawn_cron()."}
+{"event":"details","time":1571388559,"u":"84","run":"26.33","mem":"11.67","data":"About to run next step (backup_create_database_dump expected). If the backup does not proceed within 15 seconds then something is interfering with the WordPress CRON system such as: server loopback issues, caching plugins, scheduling plugins, another plugin using all available cron time, or another BackupBuddy process in progress (file transfers, other backups, Stash Live backup) taking up all cron time. Try disabling other plugins to see if it resolves issue.  Check the Server Information page cron section to see if the next BackupBuddy step is scheduled to run. Enable \"Classic\" backup mode on the \"Settings\" page to rule out non-cron issues. Additionally you may verify no other backup processes are trying to run at the same time by verifying there is not an existing backup process listed in the cron hogging the cron process."}
+{"event":"details","time":1571388559,"u":"84","run":"26.34","mem":"11.67","data":"Completed step function `backup_create_database_dump`."}
+{"event":"details","time":1571388568,"u":"12","run":"1.89","mem":"10.59","data":"--- New PHP process."}
+{"event":"details","time":1571388568,"u":"12","run":"1.89","mem":"10.59","data":"Checking max PHP execution time settings."}
+{"event":"details","time":1571388568,"u":"13","run":"1.90","mem":"10.59","data":"Skipped attempting to override max PHP execution time based on settings."}
+{"event":"details","time":1571388568,"u":"13","run":"1.90","mem":"10.59","data":"Reported PHP execution time - Configured: 30; Original: 30; Current: 30"}
+{"event":"details","time":1571388568,"u":"14","run":"1.90","mem":"10.59","data":"Attempted to set PHP memory limit to user defined WP_MAX_MEMORY_LIMIT (256M) or over-ridden value"}
+{"event":"details","time":1571388568,"u":"14","run":"1.91","mem":"10.59","data":"Reported PHP memory limits - Configured: 128M; Original: 128M; Current: 256M"}
+{"event":"message","time":1571388568,"u":"14","run":"1.91","mem":"10.59","data":"Running process for serial `fq71ihpsv4`..."}
+{"event":"details","time":1571388568,"u":"15","run":"1.92","mem":"10.72","data":"About to load fileoptions data for serial `fq71ihpsv4`."}
+{"event":"details","time":1571388568,"u":"16","run":"1.92","mem":"10.72","data":"Fileoptions instance #39."}
+{"event":"details","time":1571388568,"u":"16","run":"1.93","mem":"10.72","data":"Created fileoptions lock file `fq71ihpsv4.txt.lock` with ID: 5da97c9828f1b8.95212549."}
+{"event":"details","time":1571388568,"u":"17","run":"1.94","mem":"10.74","data":"Fileoptions load using 0.03 MB of memory."}
+{"event":"details","time":1571388568,"u":"17","run":"1.94","mem":"10.74","data":"Fileoptions data loaded."}
+{"event":"finishAction","time":1571388568,"u":"18","run":"1.95","mem":"10.74","data":"cronPass"}
+{"event":"message","time":1571388568,"u":"18","run":"1.95","mem":"10.74","data":"Backup STOPPED by user. Post backup cleanup step has been scheduled to clean up any temporary files."}
+{"event":"details","time":1571388568,"u":"19","run":"1.96","mem":"10.77","data":"Fileoptions `fq71ihpsv4.txt` saved. 9304 bytes written."}
+{"event":"haltScript","time":1571388568,"u":"19","run":"1.96","mem":"10.75","data":""}
+{"event":"details","time":1571388568,"u":"19","run":"1.96","mem":"10.75","data":"Step `backup_create_database_dump` flagged for skipping. Skipping."}
+{"event":"details","time":1571388568,"u":"20","run":"1.97","mem":"10.75","data":"Step `backup_zip_files` flagged for skipping. Skipping."}
+{"event":"details","time":1571388568,"u":"20","run":"1.97","mem":"10.75","data":"Step `integrity_check` flagged for skipping. Skipping."}
+{"event":"details","time":1571388568,"u":"21","run":"1.97","mem":"10.77","data":"Fileoptions `fq71ihpsv4.txt` saved. 9324 bytes written."}
+{"event":"details","time":1571388568,"u":"21","run":"1.98","mem":"10.75","data":"Found next step to run: `post_backup`."}
+{"event":"details","time":1571388568,"u":"21","run":"1.98","mem":"10.75","data":"Peak memory usage: 10.785 MB"}
+{"event":"details","time":1571388568,"u":"21","run":"1.98","mem":"10.75","data":"-----"}
+{"event":"details","time":1571388568,"u":"21","run":"1.98","mem":"10.75","data":"Starting step function `post_backup`. Attempt #1."}
+{"event":"startFunction","time":1571388568,"u":"21","run":"1.98","mem":"10.75","data":"{\"function\":\"post_backup\",\"title\":\"Cleaning up\"}"}
+{"event":"message","time":1571388568,"u":"22","run":"1.98","mem":"10.75","data":"Cleaning up after backup."}
+{"event":"details","time":1571388568,"u":"22","run":"1.99","mem":"10.75","data":"Removing temp data directory."}
+{"event":"details","time":1571388568,"u":"30","run":"2.07","mem":"10.75","data":"Removing temp zip directory."}
+{"event":"warning","time":1571388568,"u":"31","run":"2.08","mem":"10.75","data":"Backup archive limiting has been skipped since there was an error to avoid deleting potentially good backups to make room for a potentially bad backup."}
+{"event":"details","time":1571388568,"u":"31","run":"2.08","mem":"10.75","data":"Backup stopped so deleting backup ZIP file."}
+{"event":"error","time":1571388568,"u":"32","run":"2.09","mem":"10.75","data":"Unable to delete stopped backup file. You should delete it manually as it may be damaged from stopping mid-backup. File to delete: `\/var\/www\/public\/wp-content\/uploads\/backupbuddy_backups\/backup-192_168_33_10-2019_10_18-08_47am-db-fq71ihpsv4.zip`."}
+{"event":"details","time":1571388568,"u":"32","run":"2.09","mem":"10.77","data":"Fileoptions `fq71ihpsv4.txt` saved. 9324 bytes written."}
+{"event":"details","time":1571388568,"u":"33","run":"2.09","mem":"10.75","data":"Cleaning up any old temporary zip directories in: `\/var\/www\/public\/wp-content\/uploads\/backupbuddy_temp\/`. If no recent backups then the temp directory will also be purged."}
+{"event":"message","time":1571388568,"u":"34","run":"2.11","mem":"10.75","data":"Finished cleaning up."}
+{"event":"details","time":1571388568,"u":"35","run":"2.11","mem":"10.75","data":"Backup cancellation complete."}
+{"event":"haltScript","time":1571388568,"u":"35","run":"2.12","mem":"10.75","data":""}

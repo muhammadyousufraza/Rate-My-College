@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head ><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v21.8.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>amanda nunes Archives - Rate My College Coaches</title><link rel="stylesheet" href="https://www.ratemycollegecoaches.com/wp-content/cache/min/1/a4759e95df6c7b905e949b24e262830c.css" media="all" data-minify="1" />
+	<link rel="canonical" href="https://www.ratemycollegecoaches.com/tag/amanda-nunes/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="amanda nunes Archives - Rate My College Coaches" />
+	<meta property="og:url" content="https://www.ratemycollegecoaches.com/tag/amanda-nunes/" />
+	<meta property="og:site_name" content="Rate My College Coaches" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@_Unfnshed" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://www.ratemycollegecoaches.com/tag/amanda-nunes/","url":"https://www.ratemycollegecoaches.com/tag/amanda-nunes/","name":"amanda nunes Archives - Rate My College Coaches","isPartOf":{"@id":"https://www.ratemycollegecoaches.com/#website"},"primaryImageOfPage":{"@id":"https://www.ratemycollegecoaches.com/tag/amanda-nunes/#primaryimage"},"image":{"@id":"https://www.ratemycollegecoaches.com/tag/amanda-nunes/#primaryimage"},"thumbnailUrl":"https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg.jpg","breadcrumb":{"@id":"https://www.ratemycollegecoaches.com/tag/amanda-nunes/#breadcrumb"},"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ratemycollegecoaches.com/tag/amanda-nunes/#primaryimage","url":"https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg.jpg","contentUrl":"https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg.jpg","width":1200,"height":628},{"@type":"BreadcrumbList","@id":"https://www.ratemycollegecoaches.com/tag/amanda-nunes/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ratemycollegecoaches.com/"},{"@type":"ListItem","position":2,"name":"amanda nunes"}]},{"@type":"WebSite","@id":"https://www.ratemycollegecoaches.com/#website","url":"https://www.ratemycollegecoaches.com/","name":"Rate My College Coaches","description":"Ratings of College Head Coaches in the NCAA, NJCAA, and the NAIA","publisher":{"@id":"https://www.ratemycollegecoaches.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.ratemycollegecoaches.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.ratemycollegecoaches.com/#organization","name":"Rate My College Coaches","url":"https://www.ratemycollegecoaches.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ratemycollegecoaches.com/#/schema/logo/image/","url":"https://www.ratemycollegecoaches.com/wp-content/uploads/2019/04/logo.png","contentUrl":"https://www.ratemycollegecoaches.com/wp-content/uploads/2019/04/logo.png","width":133,"height":96,"caption":"Rate My College Coaches"},"image":{"@id":"https://www.ratemycollegecoaches.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/ratemycollegecoaches","https://twitter.com/_Unfnshed","https://www.instagram.com/_unfnshed/","https://www.linkedin.com/company/ratemycollegecoaches","https://www.youtube.com/channel/UCBC3VDX58i6ebes1ihS_cgA"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+<link rel='dns-prefetch' href='//fundingchoicesmessages.google.com' />
+
+<link rel="alternate" type="application/rss+xml" title="Rate My College Coaches &raquo; Feed" href="https://www.ratemycollegecoaches.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Rate My College Coaches &raquo; Comments Feed" href="https://www.ratemycollegecoaches.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Rate My College Coaches &raquo; amanda nunes Tag Feed" href="https://www.ratemycollegecoaches.com/tag/amanda-nunes/feed/" />
+
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+
+
+
+
+
+
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-content/themes/ratemycollege/bootstrap/js/bootstrap.min.js?ver=4.3.0" id="ratemycollege-bootstrap-js-js" defer></script>
+<script type="text/javascript" id="ratemycollege-js-js-extra">
+/* <![CDATA[ */
+var ratemycollege_vars = {"ajax_url":"\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-content/cache/min/1/wp-content/themes/ratemycollege/js/ratemycollege.js?ver=1704154361" id="ratemycollege-js-js" defer></script>
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-PBZ9GDB" id="google_gtagjs-js" async></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["www.ratemycollegecoaches.com"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-PBZ9GDB");
+/* ]]> */
+</script>
+
+<!-- End Google Analytics snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://www.ratemycollegecoaches.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.ratemycollegecoaches.com/wp-json/wp/v2/tags/375" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ratemycollegecoaches.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.4.2" />
+<meta name="generator" content="Site Kit by Google 1.118.0" /><meta name="mnet_plugin_version" content="2.10.13" />			<meta name="propeller" content="c118aa4c1602568c8075179cd75acf83" />
+			<script type="rocketlazyloadscript" data-ad-client="ca-pub-6461958168594703" async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to footer -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"pagePostType":"post","pagePostType2":"tag-post"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script type="rocketlazyloadscript" data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M9G4DBM');
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="pingback" href="https://www.ratemycollegecoaches.com/xmlrpc.php" />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    window._mNHandle = window._mNHandle || {};
+    window._mNHandle.queue = window._mNHandle.queue || [];
+    medianet_versionId = "3121199";
+</script>
+<script type="rocketlazyloadscript" src="https://contextual.media.net/dmedianet.js?cid=8CU8YZ214" async="async"></script>
+<!-- Google AdSense snippet added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense snippet added by Site Kit -->
+
+<!-- Meta Pixel Code -->
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js?v=next');
+</script>
+<!-- End Meta Pixel Code -->
+
+      <script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+        var url = window.location.origin + '?ob=open-bridge';
+        fbq('set', 'openbridge', '293384608605124', url);
+      </script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'>fbq('init', '293384608605124', {}, {
+    "agent": "wordpress-6.4.2-3.0.14"
+})</script><script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+    fbq('track', 'PageView', []);
+  </script>
+<!-- Meta Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=293384608605124&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google AdSense snippet added by Site Kit -->
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6461958168594703&amp;host=ca-host-pub-2644536267352236" crossorigin="anonymous"></script>
+
+<!-- End Google AdSense snippet added by Site Kit -->
+
+<!-- Google AdSense Ad Blocking Recovery snippet added by Site Kit -->
+<script type="rocketlazyloadscript" async src="https://fundingchoicesmessages.google.com/i/pub-6461958168594703?ers=1" nonce="siSIUd4We-RMUNzrfBZTJQ"></script><script type="rocketlazyloadscript" nonce="siSIUd4We-RMUNzrfBZTJQ">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+<!-- End Google AdSense Ad Blocking Recovery snippet added by Site Kit -->
+
+<!-- Google AdSense Ad Blocking Recovery Error Protection snippet added by Site Kit -->
+<script type="rocketlazyloadscript">(function(){'use strict';function aa(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}var ba="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;a[b]=c.value;return a};
+function ea(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("Cannot find global object");}var fa=ea(this);function ha(a,b){if(b)a:{var c=fa;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&null!=b&&ba(c,a,{configurable:!0,writable:!0,value:b})}}
+var ia="function"==typeof Object.create?Object.create:function(a){function b(){}b.prototype=a;return new b},l;if("function"==typeof Object.setPrototypeOf)l=Object.setPrototypeOf;else{var m;a:{var ja={a:!0},ka={};try{ka.__proto__=ja;m=ka.a;break a}catch(a){}m=!1}l=m?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+" is not extensible");return a}:null}var la=l;
+function n(a,b){a.prototype=ia(b.prototype);a.prototype.constructor=a;if(la)la(a,b);else for(var c in b)if("prototype"!=c)if(Object.defineProperties){var d=Object.getOwnPropertyDescriptor(b,c);d&&Object.defineProperty(a,c,d)}else a[c]=b[c];a.A=b.prototype}function ma(){for(var a=Number(this),b=[],c=a;c<arguments.length;c++)b[c-a]=arguments[c];return b}
+var na="function"==typeof Object.assign?Object.assign:function(a,b){for(var c=1;c<arguments.length;c++){var d=arguments[c];if(d)for(var e in d)Object.prototype.hasOwnProperty.call(d,e)&&(a[e]=d[e])}return a};ha("Object.assign",function(a){return a||na});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+var p=this||self;function q(a){return a};var t,u;a:{for(var oa=["CLOSURE_FLAGS"],v=p,x=0;x<oa.length;x++)if(v=v[oa[x]],null==v){u=null;break a}u=v}var pa=u&&u[610401301];t=null!=pa?pa:!1;var z,qa=p.navigator;z=qa?qa.userAgentData||null:null;function A(a){return t?z?z.brands.some(function(b){return(b=b.brand)&&-1!=b.indexOf(a)}):!1:!1}function B(a){var b;a:{if(b=p.navigator)if(b=b.userAgent)break a;b=""}return-1!=b.indexOf(a)};function C(){return t?!!z&&0<z.brands.length:!1}function D(){return C()?A("Chromium"):(B("Chrome")||B("CriOS"))&&!(C()?0:B("Edge"))||B("Silk")};var ra=C()?!1:B("Trident")||B("MSIE");!B("Android")||D();D();B("Safari")&&(D()||(C()?0:B("Coast"))||(C()?0:B("Opera"))||(C()?0:B("Edge"))||(C()?A("Microsoft Edge"):B("Edg/"))||C()&&A("Opera"));var sa={},E=null;var ta="undefined"!==typeof Uint8Array,ua=!ra&&"function"===typeof btoa;var F="function"===typeof Symbol&&"symbol"===typeof Symbol()?Symbol():void 0,G=F?function(a,b){a[F]|=b}:function(a,b){void 0!==a.g?a.g|=b:Object.defineProperties(a,{g:{value:b,configurable:!0,writable:!0,enumerable:!1}})};function va(a){var b=H(a);1!==(b&1)&&(Object.isFrozen(a)&&(a=Array.prototype.slice.call(a)),I(a,b|1))}
+var H=F?function(a){return a[F]|0}:function(a){return a.g|0},J=F?function(a){return a[F]}:function(a){return a.g},I=F?function(a,b){a[F]=b}:function(a,b){void 0!==a.g?a.g=b:Object.defineProperties(a,{g:{value:b,configurable:!0,writable:!0,enumerable:!1}})};function wa(){var a=[];G(a,1);return a}function xa(a,b){I(b,(a|0)&-99)}function K(a,b){I(b,(a|34)&-73)}function L(a){a=a>>11&1023;return 0===a?536870912:a};var M={};function N(a){return null!==a&&"object"===typeof a&&!Array.isArray(a)&&a.constructor===Object}var O,ya=[];I(ya,39);O=Object.freeze(ya);var P;function Q(a,b){P=b;a=new a(b);P=void 0;return a}
+function R(a,b,c){null==a&&(a=P);P=void 0;if(null==a){var d=96;c?(a=[c],d|=512):a=[];b&&(d=d&-2095105|(b&1023)<<11)}else{if(!Array.isArray(a))throw Error();d=H(a);if(d&64)return a;d|=64;if(c&&(d|=512,c!==a[0]))throw Error();a:{c=a;var e=c.length;if(e){var f=e-1,g=c[f];if(N(g)){d|=256;b=(d>>9&1)-1;e=f-b;1024<=e&&(za(c,b,g),e=1023);d=d&-2095105|(e&1023)<<11;break a}}b&&(g=(d>>9&1)-1,b=Math.max(b,e-g),1024<b&&(za(c,g,{}),d|=256,b=1023),d=d&-2095105|(b&1023)<<11)}}I(a,d);return a}
+function za(a,b,c){for(var d=1023+b,e=a.length,f=d;f<e;f++){var g=a[f];null!=g&&g!==c&&(c[f-b]=g)}a.length=d+1;a[d]=c};function Aa(a){switch(typeof a){case "number":return isFinite(a)?a:String(a);case "boolean":return a?1:0;case "object":if(a&&!Array.isArray(a)&&ta&&null!=a&&a instanceof Uint8Array){if(ua){for(var b="",c=0,d=a.length-10240;c<d;)b+=String.fromCharCode.apply(null,a.subarray(c,c+=10240));b+=String.fromCharCode.apply(null,c?a.subarray(c):a);a=btoa(b)}else{void 0===b&&(b=0);if(!E){E={};c="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");d=["+/=","+/","-_=","-_.","-_"];for(var e=
+0;5>e;e++){var f=c.concat(d[e].split(""));sa[e]=f;for(var g=0;g<f.length;g++){var h=f[g];void 0===E[h]&&(E[h]=g)}}}b=sa[b];c=Array(Math.floor(a.length/3));d=b[64]||"";for(e=f=0;f<a.length-2;f+=3){var k=a[f],w=a[f+1];h=a[f+2];g=b[k>>2];k=b[(k&3)<<4|w>>4];w=b[(w&15)<<2|h>>6];h=b[h&63];c[e++]=g+k+w+h}g=0;h=d;switch(a.length-f){case 2:g=a[f+1],h=b[(g&15)<<2]||d;case 1:a=a[f],c[e]=b[a>>2]+b[(a&3)<<4|g>>4]+h+d}a=c.join("")}return a}}return a};function Ba(a,b,c){a=Array.prototype.slice.call(a);var d=a.length,e=b&256?a[d-1]:void 0;d+=e?-1:0;for(b=b&512?1:0;b<d;b++)a[b]=c(a[b]);if(e){b=a[b]={};for(var f in e)Object.prototype.hasOwnProperty.call(e,f)&&(b[f]=c(e[f]))}return a}function Da(a,b,c,d,e,f){if(null!=a){if(Array.isArray(a))a=e&&0==a.length&&H(a)&1?void 0:f&&H(a)&2?a:Ea(a,b,c,void 0!==d,e,f);else if(N(a)){var g={},h;for(h in a)Object.prototype.hasOwnProperty.call(a,h)&&(g[h]=Da(a[h],b,c,d,e,f));a=g}else a=b(a,d);return a}}
+function Ea(a,b,c,d,e,f){var g=d||c?H(a):0;d=d?!!(g&32):void 0;a=Array.prototype.slice.call(a);for(var h=0;h<a.length;h++)a[h]=Da(a[h],b,c,d,e,f);c&&c(g,a);return a}function Fa(a){return a.s===M?a.toJSON():Aa(a)};function Ga(a,b,c){c=void 0===c?K:c;if(null!=a){if(ta&&a instanceof Uint8Array)return b?a:new Uint8Array(a);if(Array.isArray(a)){var d=H(a);if(d&2)return a;if(b&&!(d&64)&&(d&32||0===d))return I(a,d|34),a;a=Ea(a,Ga,d&4?K:c,!0,!1,!0);b=H(a);b&4&&b&2&&Object.freeze(a);return a}a.s===M&&(b=a.h,c=J(b),a=c&2?a:Q(a.constructor,Ha(b,c,!0)));return a}}function Ha(a,b,c){var d=c||b&2?K:xa,e=!!(b&32);a=Ba(a,b,function(f){return Ga(f,e,d)});G(a,32|(c?2:0));return a};function Ia(a,b){a=a.h;return Ja(a,J(a),b)}function Ja(a,b,c,d){if(-1===c)return null;if(c>=L(b)){if(b&256)return a[a.length-1][c]}else{var e=a.length;if(d&&b&256&&(d=a[e-1][c],null!=d))return d;b=c+((b>>9&1)-1);if(b<e)return a[b]}}function Ka(a,b,c,d,e){var f=L(b);if(c>=f||e){e=b;if(b&256)f=a[a.length-1];else{if(null==d)return;f=a[f+((b>>9&1)-1)]={};e|=256}f[c]=d;e&=-1025;e!==b&&I(a,e)}else a[c+((b>>9&1)-1)]=d,b&256&&(d=a[a.length-1],c in d&&delete d[c]),b&1024&&I(a,b&-1025)}
+function La(a,b){var c=Ma;var d=void 0===d?!1:d;var e=a.h;var f=J(e),g=Ja(e,f,b,d);var h=!1;if(null==g||"object"!==typeof g||(h=Array.isArray(g))||g.s!==M)if(h){var k=h=H(g);0===k&&(k|=f&32);k|=f&2;k!==h&&I(g,k);c=new c(g)}else c=void 0;else c=g;c!==g&&null!=c&&Ka(e,f,b,c,d);e=c;if(null==e)return e;a=a.h;f=J(a);f&2||(g=e,c=g.h,h=J(c),g=h&2?Q(g.constructor,Ha(c,h,!1)):g,g!==e&&(e=g,Ka(a,f,b,e,d)));return e}function Na(a,b){a=Ia(a,b);return null==a||"string"===typeof a?a:void 0}
+function Oa(a,b){a=Ia(a,b);return null!=a?a:0}function S(a,b){a=Na(a,b);return null!=a?a:""};function T(a,b,c){this.h=R(a,b,c)}T.prototype.toJSON=function(){var a=Ea(this.h,Fa,void 0,void 0,!1,!1);return Pa(this,a,!0)};T.prototype.s=M;T.prototype.toString=function(){return Pa(this,this.h,!1).toString()};
+function Pa(a,b,c){var d=a.constructor.v,e=L(J(c?a.h:b)),f=!1;if(d){if(!c){b=Array.prototype.slice.call(b);var g;if(b.length&&N(g=b[b.length-1]))for(f=0;f<d.length;f++)if(d[f]>=e){Object.assign(b[b.length-1]={},g);break}f=!0}e=b;c=!c;g=J(a.h);a=L(g);g=(g>>9&1)-1;for(var h,k,w=0;w<d.length;w++)if(k=d[w],k<a){k+=g;var r=e[k];null==r?e[k]=c?O:wa():c&&r!==O&&va(r)}else h||(r=void 0,e.length&&N(r=e[e.length-1])?h=r:e.push(h={})),r=h[k],null==h[k]?h[k]=c?O:wa():c&&r!==O&&va(r)}d=b.length;if(!d)return b;
+var Ca;if(N(h=b[d-1])){a:{var y=h;e={};c=!1;for(var ca in y)Object.prototype.hasOwnProperty.call(y,ca)&&(a=y[ca],Array.isArray(a)&&a!=a&&(c=!0),null!=a?e[ca]=a:c=!0);if(c){for(var rb in e){y=e;break a}y=null}}y!=h&&(Ca=!0);d--}for(;0<d;d--){h=b[d-1];if(null!=h)break;var cb=!0}if(!Ca&&!cb)return b;var da;f?da=b:da=Array.prototype.slice.call(b,0,d);b=da;f&&(b.length=d);y&&b.push(y);return b};function Qa(a){return function(b){if(null==b||""==b)b=new a;else{b=JSON.parse(b);if(!Array.isArray(b))throw Error(void 0);G(b,32);b=Q(a,b)}return b}};function Ra(a){this.h=R(a)}n(Ra,T);var Sa=Qa(Ra);var U;function V(a){this.g=a}V.prototype.toString=function(){return this.g+""};var Ta={};function Ua(){return Math.floor(2147483648*Math.random()).toString(36)+Math.abs(Math.floor(2147483648*Math.random())^Date.now()).toString(36)};function Va(a,b){b=String(b);"application/xhtml+xml"===a.contentType&&(b=b.toLowerCase());return a.createElement(b)}function Wa(a){this.g=a||p.document||document}Wa.prototype.appendChild=function(a,b){a.appendChild(b)};/*
+
+ SPDX-License-Identifier: Apache-2.0
+*/
+function Xa(a,b){a.src=b instanceof V&&b.constructor===V?b.g:"type_error:TrustedResourceUrl";var c,d;(c=(b=null==(d=(c=(a.ownerDocument&&a.ownerDocument.defaultView||window).document).querySelector)?void 0:d.call(c,"script[nonce]"))?b.nonce||b.getAttribute("nonce")||"":"")&&a.setAttribute("nonce",c)};function Ya(a){a=void 0===a?document:a;return a.createElement("script")};function Za(a,b,c,d,e,f){try{var g=a.g,h=Ya(g);h.async=!0;Xa(h,b);g.head.appendChild(h);h.addEventListener("load",function(){e();d&&g.head.removeChild(h)});h.addEventListener("error",function(){0<c?Za(a,b,c-1,d,e,f):(d&&g.head.removeChild(h),f())})}catch(k){f()}};var $a=p.atob("aHR0cHM6Ly93d3cuZ3N0YXRpYy5jb20vaW1hZ2VzL2ljb25zL21hdGVyaWFsL3N5c3RlbS8xeC93YXJuaW5nX2FtYmVyXzI0ZHAucG5n"),ab=p.atob("WW91IGFyZSBzZWVpbmcgdGhpcyBtZXNzYWdlIGJlY2F1c2UgYWQgb3Igc2NyaXB0IGJsb2NraW5nIHNvZnR3YXJlIGlzIGludGVyZmVyaW5nIHdpdGggdGhpcyBwYWdlLg=="),bb=p.atob("RGlzYWJsZSBhbnkgYWQgb3Igc2NyaXB0IGJsb2NraW5nIHNvZnR3YXJlLCB0aGVuIHJlbG9hZCB0aGlzIHBhZ2Uu");function db(a,b,c){this.i=a;this.l=new Wa(this.i);this.g=null;this.j=[];this.m=!1;this.u=b;this.o=c}
+function eb(a){if(a.i.body&&!a.m){var b=function(){fb(a);p.setTimeout(function(){return gb(a,3)},50)};Za(a.l,a.u,2,!0,function(){p[a.o]||b()},b);a.m=!0}}
+function fb(a){for(var b=W(1,5),c=0;c<b;c++){var d=X(a);a.i.body.appendChild(d);a.j.push(d)}b=X(a);b.style.bottom="0";b.style.left="0";b.style.position="fixed";b.style.width=W(100,110).toString()+"%";b.style.zIndex=W(2147483544,2147483644).toString();b.style["background-color"]=hb(249,259,242,252,219,229);b.style["box-shadow"]="0 0 12px #888";b.style.color=hb(0,10,0,10,0,10);b.style.display="flex";b.style["justify-content"]="center";b.style["font-family"]="Roboto, Arial";c=X(a);c.style.width=W(80,
+85).toString()+"%";c.style.maxWidth=W(750,775).toString()+"px";c.style.margin="24px";c.style.display="flex";c.style["align-items"]="flex-start";c.style["justify-content"]="center";d=Va(a.l.g,"IMG");d.className=Ua();d.src=$a;d.alt="Warning icon";d.style.height="24px";d.style.width="24px";d.style["padding-right"]="16px";var e=X(a),f=X(a);f.style["font-weight"]="bold";f.textContent=ab;var g=X(a);g.textContent=bb;Y(a,e,f);Y(a,e,g);Y(a,c,d);Y(a,c,e);Y(a,b,c);a.g=b;a.i.body.appendChild(a.g);b=W(1,5);for(c=
+0;c<b;c++)d=X(a),a.i.body.appendChild(d),a.j.push(d)}function Y(a,b,c){for(var d=W(1,5),e=0;e<d;e++){var f=X(a);b.appendChild(f)}b.appendChild(c);c=W(1,5);for(d=0;d<c;d++)e=X(a),b.appendChild(e)}function W(a,b){return Math.floor(a+Math.random()*(b-a))}function hb(a,b,c,d,e,f){return"rgb("+W(Math.max(a,0),Math.min(b,255)).toString()+","+W(Math.max(c,0),Math.min(d,255)).toString()+","+W(Math.max(e,0),Math.min(f,255)).toString()+")"}function X(a){a=Va(a.l.g,"DIV");a.className=Ua();return a}
+function gb(a,b){0>=b||null!=a.g&&0!=a.g.offsetHeight&&0!=a.g.offsetWidth||(ib(a),fb(a),p.setTimeout(function(){return gb(a,b-1)},50))}
+function ib(a){var b=a.j;var c="undefined"!=typeof Symbol&&Symbol.iterator&&b[Symbol.iterator];if(c)b=c.call(b);else if("number"==typeof b.length)b={next:aa(b)};else throw Error(String(b)+" is not an iterable or ArrayLike");for(c=b.next();!c.done;c=b.next())(c=c.value)&&c.parentNode&&c.parentNode.removeChild(c);a.j=[];(b=a.g)&&b.parentNode&&b.parentNode.removeChild(b);a.g=null};function jb(a,b,c,d,e){function f(k){document.body?g(document.body):0<k?p.setTimeout(function(){f(k-1)},e):b()}function g(k){k.appendChild(h);p.setTimeout(function(){h?(0!==h.offsetHeight&&0!==h.offsetWidth?b():a(),h.parentNode&&h.parentNode.removeChild(h)):a()},d)}var h=kb(c);f(3)}function kb(a){var b=document.createElement("div");b.className=a;b.style.width="1px";b.style.height="1px";b.style.position="absolute";b.style.left="-10000px";b.style.top="-10000px";b.style.zIndex="-10000";return b};function Ma(a){this.h=R(a)}n(Ma,T);function lb(a){this.h=R(a)}n(lb,T);var mb=Qa(lb);function nb(a){a=Na(a,4)||"";if(void 0===U){var b=null;var c=p.trustedTypes;if(c&&c.createPolicy){try{b=c.createPolicy("goog#html",{createHTML:q,createScript:q,createScriptURL:q})}catch(d){p.console&&p.console.error(d.message)}U=b}else U=b}a=(b=U)?b.createScriptURL(a):a;return new V(a,Ta)};function ob(a,b){this.m=a;this.o=new Wa(a.document);this.g=b;this.j=S(this.g,1);this.u=nb(La(this.g,2));this.i=!1;b=nb(La(this.g,13));this.l=new db(a.document,b,S(this.g,12))}ob.prototype.start=function(){pb(this)};
+function pb(a){qb(a);Za(a.o,a.u,3,!1,function(){a:{var b=a.j;var c=p.btoa(b);if(c=p[c]){try{var d=Sa(p.atob(c))}catch(e){b=!1;break a}b=b===Na(d,1)}else b=!1}b?Z(a,S(a.g,14)):(Z(a,S(a.g,8)),eb(a.l))},function(){jb(function(){Z(a,S(a.g,7));eb(a.l)},function(){return Z(a,S(a.g,6))},S(a.g,9),Oa(a.g,10),Oa(a.g,11))})}function Z(a,b){a.i||(a.i=!0,a=new a.m.XMLHttpRequest,a.open("GET",b,!0),a.send())}function qb(a){var b=p.btoa(a.j);a.m[b]&&Z(a,S(a.g,5))};(function(a,b){p[a]=function(){var c=ma.apply(0,arguments);p[a]=function(){};b.apply(null,c)}})("__h82AlnkH6D91__",function(a){"function"===typeof window.atob&&(new ob(window,mb(window.atob(a)))).start()});}).call(this);
+
+window.__h82AlnkH6D91__("WyJwdWItNjQ2MTk1ODE2ODU5NDcwMyIsW251bGwsbnVsbCxudWxsLCJodHRwczovL2Z1bmRpbmdjaG9pY2VzbWVzc2FnZXMuZ29vZ2xlLmNvbS9iL3B1Yi02NDYxOTU4MTY4NTk0NzAzIl0sbnVsbCxudWxsLCJodHRwczovL2Z1bmRpbmdjaG9pY2VzbWVzc2FnZXMuZ29vZ2xlLmNvbS9lbC9BR1NLV3hWRk5FZlg3T09BRGtINXYxU0FuNzZXd0tmM2RCRll5S0xYQlMyb2NfcFktVlphS1hBbTFuZU9SVkhaR2REZFhqbU9DczA5SjlSd1FnZDQ5SlFfMTZGdnNRXHUwMDNkXHUwMDNkP3RlXHUwMDNkVE9LRU5fRVhQT1NFRCIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFdFVVQ4d2ZKRlNzY2ZVME0tX3JvRVB4LU1PeENvTFhYMFJaMVNrR3dITHMxaDA4QjU5ZzFGVEQ4cFNaVUpQTWRkVV82Q2Vkb0lWcE9MdXF2SDRtX3hIUWdcdTAwM2RcdTAwM2Q/YWJcdTAwM2QxXHUwMDI2c2JmXHUwMDNkMSIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFhxT0xNUW9GYmxhSm9fcUdkWVZJRDAyRG14YzV2aGZkQVY4QW5jV05oX3FjZmwyS2V2NDZjMUo5cDRmRkhXbWR5UUJfYmtrTjg5cGp5T1lzVjRNbWtEN3dcdTAwM2RcdTAwM2Q/YWJcdTAwM2QyXHUwMDI2c2JmXHUwMDNkMSIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFY3UU1EdHo3c1lvNjEwOC1vd1QzMU8zSDlQTlhWZEFTMlFNRFdqRnh4OHc0cUh4ZWNKTWs2VDI0RTcxWk9tTDZVWTZmNFhndDVncGd0X2xNVngwWHVicHdcdTAwM2RcdTAwM2Q/c2JmXHUwMDNkMiIsImRpdi1ncHQtYWQiLDIwLDEwMCwiY0hWaUxUWTBOakU1TlRneE5qZzFPVFEzTURNXHUwMDNkIixbbnVsbCxudWxsLG51bGwsImh0dHBzOi8vd3d3LmdzdGF0aWMuY29tLzBlbW4vZi9wL3B1Yi02NDYxOTU4MTY4NTk0NzAzLmpzP3VzcXBcdTAwM2RDQXMiXSwiaHR0cHM6Ly9mdW5kaW5nY2hvaWNlc21lc3NhZ2VzLmdvb2dsZS5jb20vZWwvQUdTS1d4V2hfUjFtb2VrZlZabU9pczhNRTBkVV9mcDJUZVJfV21iYmhLWWtoc29xNm8ydGVaeWtQWFF1TC1hQXF4OVAtU2l1Y1NNOVE3V1l5WjdTTm9Kc1hwTnBqZ1x1MDAzZFx1MDAzZCJd");</script>
+<!-- End Google AdSense Ad Blocking Recovery Error Protection snippet added by Site Kit -->
+<link rel="icon" href="https://www.ratemycollegecoaches.com/wp-content/uploads/2019/04/logo.png" sizes="32x32" />
+<link rel="icon" href="https://www.ratemycollegecoaches.com/wp-content/uploads/2019/04/logo.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.ratemycollegecoaches.com/wp-content/uploads/2019/04/logo.png" />
+<meta name="msapplication-TileImage" content="https://www.ratemycollegecoaches.com/wp-content/uploads/2019/04/logo.png" />
+</head>
+<body data-rsssl=1 class="archive tag tag-amanda-nunes tag-375 full-width-content genesis-breadcrumbs-hidden genesis-footer-widgets-hidden"><div class="site-container"><header class="ratemycollege-header">
+    <div class="ratemycollege-header-above">
+        <div class="wrap">
+            <div class="ratemycollege-header-above-left">
+                <form class="search-form-custom" itemprop="potentialAction" itemscope=""
+                    itemtype="https://schema.org/SearchAction" method="get" action="https://www.ratemycollegecoaches.com"
+                    role="search"><input class="search-form-input" type="search" itemprop="query-input" name="s"
+                        placeholder="Search for a coach or school"><input class="search-form-submit" type="submit"
+                        value="Search">
+                    <meta itemprop="target">
+                </form>
+            </div>
+            <div class="ratemycollege-header-above-right">
+                                <a href="https://twitter.com/_Unfnshed" target="_blank" title="Twitter"><i class="fa fa-twitter"
+                        aria-hidden="true"></i></a>
+                                  <a href="https://www.instagram.com/_unfnshed/" target="_blank" title="Instagram"><i class="fa fa-instagram"
+                        aria-hidden="true"></i></a>
+                                  <a href="https://www.facebook.com/ratemycollegecoaches" target="_blank" title="Facebook"><i class="fa fa-facebook"
+                        aria-hidden="true"></i></a>
+                            </div>
+        </div>
+    </div>
+    <div class="ratemycollege-header-bellow">
+        <div class="wrap">
+            <div class="custom-header-left">
+                <a href="https://www.ratemycollegecoaches.com">
+                                        <img src="https://www.ratemycollegecoaches.com/wp-content/themes/ratemycollege/images/logo.png" />
+                                    </a>
+            </div>
+            <div class="custom-header-right">
+                <nav class="nav-primary" aria-label="Main"><div class="wrap"><ul id="menu-second-menus" class="menu genesis-nav-menu menu-primary"><li id="menu-item-58654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-58654"><a href="https://www.ratemycollegecoaches.com/"><span >Home</span></a></li>
+<li id="menu-item-33777" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-33777"><a href="https://www.ratemycollegecoaches.com/blog/"><span >Blog</span></a></li>
+<li id="menu-item-74822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74822"><a href="https://www.ratemycollegecoaches.com/podcast/"><span >Podcast</span></a></li>
+<li id="menu-item-33769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33769"><a href="https://www.ratemycollegecoaches.com/contact-us-2/"><span >Contact us</span></a></li>
+<li id="menu-item-58056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58056"><a href="https://www.ratemycollegecoaches.com/about/"><span >About us</span></a></li>
+</ul></div></nav>            </div>
+        </div>
+    </div>
+</header>
+<div class="modal fade" id="ratemycollege_login2_modal" tabindex="-1" role="dialog"
+    aria-labelledby="ratemycollege_login2ModalLabel" aria-hidden="true">
+    <form id="ratemycollege_login2_form">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ratemycollege_login2ModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="ratemycollege_login2_username"
+                            id="ratemycollege_login2_username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="ratemycollege_login2_password"
+                            id="ratemycollege_login2_password" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="ratemycollege_login2_message" role="alert"></span>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="ratemycollege_login2_submit">Login</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="site-inner"><div class="wrap">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+    <div class="posts-wrap">
+              <div class="latest-posts">
+          <article id="post-76492" class="post-76492 post type-post status-publish format-standard has-post-thumbnail category-editorial-opinion category-ncaaf entry">
+  <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/unfinished-athlete-of-the-month-travis-hunter/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1-1024x536.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1-300x157.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1-768x402.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1-1024x536.png" height="536" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1-1024x536.png 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1-300x157.png 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1-768x402.png 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/Travis-Hunter-1200x628-1.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+  <div class="info">
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/unfinished-athlete-of-the-month-travis-hunter/" rel="bookmark">Unfinished Athlete of the Month: Travis Hunter</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/abhi-iyer/">Abhi Iyer</a></span></span>    </div>
+  </div>
+</article><!-- #post-76492 --><article id="post-76453" class="post-76453 post type-post status-publish format-standard has-post-thumbnail category-nhl entry">
+  <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/trevor-zegras-is-not-your-average-forward/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380-1024x536.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380-300x157.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380-768x402.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380-1024x536.jpg" height="536" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/04/1359273380.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+  <div class="info">
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/trevor-zegras-is-not-your-average-forward/" rel="bookmark">Trevor Zegras Is Not Your Average Forward</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/haley-wald/">Haley Wald</a></span></span>    </div>
+  </div>
+</article><!-- #post-76453 --><article id="post-76421" class="post-76421 post type-post status-publish format-standard has-post-thumbnail category-editorial-opinion category-nba tag-anthony-davis tag-lakers tag-lakersnation tag-lebron-james tag-nba tag-nba-trades tag-russell-westbrook tag-trade entry">
+  <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/should-the-lakers-trade-anthony-davis/"><img width="1024" height="536" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/davis-bench-tw-gettyimages-1238911355-1024x536.webp" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/davis-bench-tw-gettyimages-1238911355-1024x536.webp 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/davis-bench-tw-gettyimages-1238911355-300x157.webp 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/davis-bench-tw-gettyimages-1238911355-768x402.webp 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/davis-bench-tw-gettyimages-1238911355.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+  <div class="info">
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/should-the-lakers-trade-anthony-davis/" rel="bookmark">Should the Lakers Trade Anthony Davis?</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/cpasley/">Chris Pasley</a></span></span>    </div>
+  </div>
+</article><!-- #post-76421 --><article id="post-76431" class="post-76431 post type-post status-publish format-standard has-post-thumbnail category-mens-basketball category-ncaa entry">
+  <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/zach-edey/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1-1024x536.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1-300x157.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1-768x402.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1-1024x536.jpg" height="536" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/03/USATSI_15682655-scaled-1200x628-1.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+  <div class="info">
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/zach-edey/" rel="bookmark">Unfinished Athlete of the Month: Zach Edey</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/abhi-iyer/">Abhi Iyer</a></span></span>    </div>
+  </div>
+</article><!-- #post-76431 --><article id="post-76391" class="post-76391 post type-post status-publish format-standard has-post-thumbnail category-uncategorized entry">
+  <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/olympic-games-2022-team-usas-favored-athletes/"><img width="1024" height="536" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/GettyImages_1368587679-1024x536.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/GettyImages_1368587679-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/GettyImages_1368587679-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/GettyImages_1368587679-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/GettyImages_1368587679.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+  <div class="info">
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/olympic-games-2022-team-usas-favored-athletes/" rel="bookmark">Olympic Games 2022: Team USA&#8217;s Favored Athletes</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/haley-wald/">Haley Wald</a></span></span>    </div>
+  </div>
+</article><!-- #post-76391 --><article id="post-76403" class="post-76403 post type-post status-publish format-standard has-post-thumbnail category-football category-general category-nfl category-sports tag-bengals tag-nfl tag-predictions tag-rams tag-super-bowl entry">
+  <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/super-bowl-lvi/"><img width="612" height="416" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/lombardi-trophy.jpeg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/lombardi-trophy.jpeg 612w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/lombardi-trophy-300x204.jpeg 300w" sizes="(max-width: 612px) 100vw, 612px" /></a>
+  </div>
+  <div class="info">
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/super-bowl-lvi/" rel="bookmark">Super Bowl LVI</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/chris-johnson/">Chris Johnson</a></span></span>    </div>
+  </div>
+</article><!-- #post-76403 -->        </div>
+        <div class="other-posts">
+          
+<article id="post-76361" class="post-76361 post type-post status-publish format-standard has-post-thumbnail category-editorial-opinion category-nba entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/the-rise-of-the-cleveland-cavaliers/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-1024x681.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-300x200.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-768x511.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-1536x1022.webp 1536w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-2048x1363.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-1024x681.jpeg" height="681" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-1024x681.jpeg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-300x200.jpeg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-768x511.jpeg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-1536x1022.jpeg 1536w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/Cavs-2048x1363.jpeg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/editorial-opinion/" rel="category tag">Editorial/Opinion</a>, <a href="https://www.ratemycollegecoaches.com/category/nba/" rel="category tag">NBA</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/the-rise-of-the-cleveland-cavaliers/" rel="bookmark">The Rise of The Cleveland Cavaliers</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/cpasley/">Chris Pasley</a></span></span>    </div>
+    <div class="text"><p>Nearly four years ago, LeBron James and the Cleveland Cavaliers lost to the Golden State Warriors in a 4-0 sweep in the NBA Finals. After winning the championship in 2016 for the first time in franchise history, James and the Cavaliers were not able to get past Golden State for the second straight year. This [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76361 -->
+<article id="post-76284" class="post-76284 post type-post status-publish format-standard has-post-thumbnail category-mens-basketball category-nba category-ncaa category-uncategorized tag-boston-celtics tag-hbcu-basketball tag-nba tag-nccu entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/76284-revision-v1/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1-1024x536.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1-300x157.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1-768x402.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1-1024x536.png" height="536" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1-1024x536.png 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1-300x157.png 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1-768x402.png 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/02/My-project-1.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/mens-basketball/" rel="category tag">Men's Basketball</a>, <a href="https://www.ratemycollegecoaches.com/category/nba/" rel="category tag">NBA</a>, <a href="https://www.ratemycollegecoaches.com/category/ncaa/" rel="category tag">NCAA</a>, <a href="https://www.ratemycollegecoaches.com/category/uncategorized/" rel="category tag">Uncategorized</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/76284-revision-v1/" rel="bookmark">Hall of Famer Sam Jones Passes Away at 88</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/kaira-cabato/">Kaira Cabato</a></span></span>    </div>
+    <div class="text"><p>Samuel Jones (June 24, 1933 – December 30, 2021), better known as Sam Jones of Wilmington, North Carolina, attended the Laurinburg Institute, North Carolina Central University, before being the 1st round and 8th overall pick selected by the Boston Celtics. The Hall of Famer, HBCU, and NBA star passed away on a Thursday night in [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76284 -->
+<article id="post-76347" class="post-76347 post type-post status-publish format-standard has-post-thumbnail category-football category-general category-nfl category-sports tag-lawsuit tag-nfl tag-nfl-coaches tag-nfl-playoffs tag-tom-brady entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/a-recap-of-the-greatest-2-weeks-in-nfl-history/"><img width="1024" height="576" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1-1024x576.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1-1024x576.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1-300x169.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1-768x432.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/football/" rel="category tag">Football</a>, <a href="https://www.ratemycollegecoaches.com/category/general/" rel="category tag">General</a>, <a href="https://www.ratemycollegecoaches.com/category/nfl/" rel="category tag">NFL</a>, <a href="https://www.ratemycollegecoaches.com/category/sports/" rel="category tag">Sports</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/a-recap-of-the-greatest-2-weeks-in-nfl-history/" rel="bookmark">A Recap of the Greatest 2 Weeks in NFL History</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/chris-johnson/">Chris Johnson</a></span></span>    </div>
+    <div class="text"><p>These past two weeks had me hornswaggled, anxious, and stunned. Football fans may have witnessed the greatest  2 weeks of football in NFL history with 4 walk-off field goals, a walk-off touchdown, and a game clinching interception. If you want to see what predictions I made ahead of this madness, check it out here. Pick [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76347 -->
+<article id="post-76149" class="post-76149 post type-post status-publish format-standard has-post-thumbnail category-editorial-opinion category-football category-nfl category-sports category-uncategorized tag-concussions tag-nfl entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/nfl-the-show-must-go-on-while-serious-brain-injuries-occur/"><img width="1024" height="536" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1351982123-1024x536.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1351982123-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1351982123-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1351982123-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1351982123.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/editorial-opinion/" rel="category tag">Editorial/Opinion</a>, <a href="https://www.ratemycollegecoaches.com/category/football/" rel="category tag">Football</a>, <a href="https://www.ratemycollegecoaches.com/category/nfl/" rel="category tag">NFL</a>, <a href="https://www.ratemycollegecoaches.com/category/sports/" rel="category tag">Sports</a>, <a href="https://www.ratemycollegecoaches.com/category/uncategorized/" rel="category tag">Uncategorized</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/nfl-the-show-must-go-on-while-serious-brain-injuries-occur/" rel="bookmark">NFL: The &#8220;Show Must Go On&#8221; While Serious Brain Injuries Occur</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/victoria-schutz/">Victoria Schutz</a></span></span>    </div>
+    <div class="text"><p>When entering the game of football, there needs to be an understanding of how serious brain injuries can get. It can be a scary sight to see your son or teammate take a hit to the turf and get knocked out cold. Embed from Getty Images Regardless of the improvement of football helmets, the seriousness [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76149 -->
+<article id="post-76251" class="post-76251 post type-post status-publish format-standard has-post-thumbnail category-general category-mens-basketball category-nba category-sports tag-basketball tag-dirk-nowitzki tag-nba entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/dirk-nowitzki-story-and-impact/"><img width="1024" height="536" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/usa_today_17458765-1024x536.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/usa_today_17458765-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/usa_today_17458765-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/usa_today_17458765-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/usa_today_17458765.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/general/" rel="category tag">General</a>, <a href="https://www.ratemycollegecoaches.com/category/mens-basketball/" rel="category tag">Men's Basketball</a>, <a href="https://www.ratemycollegecoaches.com/category/nba/" rel="category tag">NBA</a>, <a href="https://www.ratemycollegecoaches.com/category/sports/" rel="category tag">Sports</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/dirk-nowitzki-story-and-impact/" rel="bookmark">Dirk Nowitzki &#8211; His Story and Impact</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/chris-johnson/">Chris Johnson</a></span></span>    </div>
+    <div class="text"><p>Dirk Nowitzki had his jersey retired on Wednesday, January 5th, and it’s time to remind people of the impact the German sensation left on the NBA. His patented one leg jumper and marksmanship from the post to the 3-point line allowed Nowitzki to be one of the first and most memorable big men who could [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76251 -->
+<article id="post-76323" class="post-76323 post type-post status-publish format-standard has-post-thumbnail category-football category-nfl category-sports tag-football tag-nfl tag-playoffs tag-tom-brady entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/nfl-divisional-round-preview-matchups-predictions-for-second-round/"><img width="1024" height="576" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1-1024x576.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1-1024x576.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1-300x169.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1-768x432.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/nflplayoffs1.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/football/" rel="category tag">Football</a>, <a href="https://www.ratemycollegecoaches.com/category/nfl/" rel="category tag">NFL</a>, <a href="https://www.ratemycollegecoaches.com/category/sports/" rel="category tag">Sports</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/nfl-divisional-round-preview-matchups-predictions-for-second-round/" rel="bookmark">NFL Divisional Round Preview: Matchups, Predictions for Second Round</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/tsenerchia/">Thomas Senerchia</a></span></span>    </div>
+    <div class="text"><p>Last week’s NFL wildcard round was a little disappointing in terms of competitiveness. Only two of the six games were decided by single digits. The Bills, Bucs, Chiefs and Rams pummeled their opponents by a combined 90 points. Only eight teams remain in the playoffs heading into the divisional round. The two number one seeds [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76323 -->
+<article id="post-76237" class="post-76237 post type-post status-publish format-standard has-post-thumbnail category-ncaa category-swimming tag-jaden-olson tag-jones tag-mike-schnur tag-ncaa tag-penn tag-sasha-malanina tag-swimming tag-university-of-penn entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/jaden-olson-penn-swimming/"><img width="1024" height="1024" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/EJR04QhWkAA1qpp-1024x1024.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/EJR04QhWkAA1qpp-1024x1024.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/EJR04QhWkAA1qpp-300x300.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/EJR04QhWkAA1qpp-150x150.jpg 150w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/EJR04QhWkAA1qpp-768x768.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/EJR04QhWkAA1qpp-258x258.jpg 258w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/EJR04QhWkAA1qpp.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/ncaa/" rel="category tag">NCAA</a>, <a href="https://www.ratemycollegecoaches.com/category/swimming/" rel="category tag">Swimming</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/jaden-olson-penn-swimming/" rel="bookmark">Jaden Olson: Penn Swimming</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/thurman-foreman/">Thurman Foreman</a></span></span>    </div>
+    <div class="text"><p>Sophomore Jaden Christian Olson started swimming at 8 years old and now swims the 100m Backstroke and 100m Butterfly at the University of Pennsylvania (Penn). In several events, he broke William Jones College Prep and Chicago Public Schools&#8217; swimming records, taking several of them from fellow high school stand outs. Olson took the 100m and [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76237 -->
+<article id="post-76291" class="post-76291 post type-post status-publish format-standard has-post-thumbnail category-mens-basketball category-nba category-sports tag-atlanta-hawks tag-breaking-news tag-nba tag-nba-trade-deadline tag-new-york-knicks entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/breaking-news-knicks-trade-for-cam-reddish/"><img width="612" height="407" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Cam-Reddish.jpeg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Cam-Reddish.jpeg 612w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Cam-Reddish-300x200.jpeg 300w" sizes="(max-width: 612px) 100vw, 612px" /></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/mens-basketball/" rel="category tag">Men's Basketball</a>, <a href="https://www.ratemycollegecoaches.com/category/nba/" rel="category tag">NBA</a>, <a href="https://www.ratemycollegecoaches.com/category/sports/" rel="category tag">Sports</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/breaking-news-knicks-trade-for-cam-reddish/" rel="bookmark">Breaking News: NY Knicks Trade for Cam Reddish</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/chris-johnson/">Chris Johnson</a></span></span>    </div>
+    <div class="text"><p>Breaking News: Earlier today, the Atlanta Hawks were involved in a trade that sent Cam Reddish, Solomon Hill and a 2025 second-round pick via the Brooklyn Nets to the Knicks. In return, the Hawks received Kevin Knox and a 2022 1st-round pick via Charlotte per Adrian Wojnarowski of ESPN. &nbsp; ESPN Sources: The Atlanta Hawks [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76291 -->
+<article id="post-76268" class="post-76268 post type-post status-publish format-standard has-post-thumbnail category-football category-nfl category-sports tag-football tag-nfl tag-playoffs entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/nfl-wildcard-preview-matchups-predictions-for-first-round-of-playoffs/"><img width="1024" height="576" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/NFL-Playoffs-1-1024x576.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/NFL-Playoffs-1-1024x576.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/NFL-Playoffs-1-300x169.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/NFL-Playoffs-1-768x432.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/NFL-Playoffs-1.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/football/" rel="category tag">Football</a>, <a href="https://www.ratemycollegecoaches.com/category/nfl/" rel="category tag">NFL</a>, <a href="https://www.ratemycollegecoaches.com/category/sports/" rel="category tag">Sports</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/nfl-wildcard-preview-matchups-predictions-for-first-round-of-playoffs/" rel="bookmark">NFL Wildcard Preview: Matchups, Predictions For First Round of Playoffs</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/tsenerchia/">Thomas Senerchia</a></span></span>    </div>
+    <div class="text"><p>Buckle up folks, it&#8217;s playoff time in the NFL. The 2021 regular season is officially over, and 14 teams remain. The expanded playoffs give us an extra team in each conference, setting up a six-game slate for the first round. Aaron Rodgers and the Green Bay Packers secured the top seed in the NFC for [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76268 -->
+<article id="post-76185" class="post-76185 post type-post status-publish format-standard has-post-thumbnail category-ufc entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/juliana-pena-refreshing-bantamweight-champion/"><img width="1024" height="536" src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1358520297-1024x536.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1358520297-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1358520297-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1358520297-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1358520297.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/sports/ufc/" rel="category tag">UFC</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/juliana-pena-refreshing-bantamweight-champion/" rel="bookmark">Refreshing Juliana Peña Now 135lb Champion</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/thurman-foreman/">Thurman Foreman</a></span></span>    </div>
+    <div class="text"><p>It is so refreshing to have another women&#8217;s champion wearing their heart on their sleeves and voicing their frustrations during their journey. Peña has shown that every champion is best off expressing all of their feelings about their opponents. Juliana Peña has been calling out Amanda Nunes for four years. No one else would speak [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76185 -->
+<article id="post-76187" class="post-76187 post type-post status-publish format-standard has-post-thumbnail category-ufc tag-cyril-gane tag-daniel-cormier tag-francis-ngannou tag-jon-jones tag-rampage tag-shogun tag-tom-brady entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/ufc-270-preview-unify-french-championship/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401-1024x536.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401-300x157.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401-768x402.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401-1024x536.jpg" height="536" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/1332970401.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/sports/ufc/" rel="category tag">UFC</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/ufc-270-preview-unify-french-championship/" rel="bookmark">French Heavyweights: UFC 270 Preview</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/thurman-foreman/">Thurman Foreman</a></span></span>    </div>
+    <div class="text"><p>The Heavyweight champion is said to be the &#8216;Baddest Man on the Planet&#8217;. The UFC 270 title unification bout will crown the new undisputed UFC Heavyweight champion. Better yet, it will showcase the UFC&#8217;s biggest French mixed martial artists. One month to go!! 💥@Francis_Ngannou vs @Ciryl_Gane at #UFC270!! pic.twitter.com/3JNxcolqcp &mdash; UFC Europe (@UFCEurope) December 22, [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76187 -->
+<article id="post-76183" class="post-76183 post type-post status-publish format-standard has-post-thumbnail category-ufc tag-aj-mckee tag-francis-ngannou tag-israel-adesanya tag-justin-gaethje tag-paddy-pimblett tag-rose-namajuanas tag-sean-omalley entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/future-most-fun-fighters-to-watch/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva-1024x536.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva-300x157.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva-768x402.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva-1024x536.jpg" height="536" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/117_Israel_Adesanya_x_Anderson_Silva.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/sports/ufc/" rel="category tag">UFC</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/future-most-fun-fighters-to-watch/" rel="bookmark">Future Stars in MMA</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/thurman-foreman/">Thurman Foreman</a></span></span>    </div>
+    <div class="text"><p>Champions Israel Adesanya (Izzy) [185] This has to be the most ruthless champion to date in online and verbal insults. I wouldn&#8217;t describe all of Adesanya&#8217;s comments as &#8220;trash&#8221;, some of it is just insults. Humping Paulo Costa after knocking him out and telling Jon Jones his late mother would be ashamed of him are [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76183 -->
+<article id="post-76233" class="post-76233 post type-post status-publish format-standard has-post-thumbnail category-nhl category-olympics entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/nhl-pulls-out-of-2022-olympics/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey-1024x536.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey-300x157.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey-768x402.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey-1024x536.jpg" height="536" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/Vancouver_Olympics_Ice_Hockey.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/nhl/" rel="category tag">NHL</a>, <a href="https://www.ratemycollegecoaches.com/category/olympics/" rel="category tag">Olympics</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/nhl-pulls-out-of-2022-olympics/" rel="bookmark">NHL Pulls Out of 2022 Olympics</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/haley-wald/">Haley Wald</a></span></span>    </div>
+    <div class="text"><p>The National Hockey League (NHL) and the National Hockey League Players Association (NHLPA) have decided to back out of the 2022 Olympics in Beijing. The decision it seems, is inevitable. Due to an overwhelming rise in Coronavirus (COVID) cases around the league, over 70 games have been postponed. What would’ve been a 16 day gap [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76233 -->
+<article id="post-76174" class="post-76174 post type-post status-publish format-standard has-post-thumbnail category-editorial-opinion category-ufc tag-135lb tag-amanda-nunes tag-bantamweight tag-cyborg tag-holly-holm tag-meisha-tate tag-ronda-rousey tag-strikeforce entry">
+    <div class="image">
+    <a href="https://www.ratemycollegecoaches.com/amanda-nunes-the-135lb-goat/"><picture><source srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg-1024x536.webp 1024w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg-300x157.webp 300w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg-768x402.webp 768w,https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img src="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg-1024x536.jpg" height="536" width="1024" srcset="https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg-1024x536.jpg 1024w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg-300x157.jpg 300w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg-768x402.jpg 768w, https://www.ratemycollegecoaches.com/wp-content/uploads/2022/01/150491168.jpg.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-post-image sp-no-webp" alt="" decoding="async"  > </picture></a>
+  </div>
+    <div class="info">
+    <div class="category-list">
+      <span class="cat-links"><a href="https://www.ratemycollegecoaches.com/category/editorial-opinion/" rel="category tag">Editorial/Opinion</a>, <a href="https://www.ratemycollegecoaches.com/category/sports/ufc/" rel="category tag">UFC</a></span>    </div>
+    <h2 class="entry-title"><a href="https://www.ratemycollegecoaches.com/amanda-nunes-the-135lb-goat/" rel="bookmark">Amanda Nunes Dethroned as 135lb Champion</a></h2>    <div class="meta">
+      <span class="byline"><span class="screen-reader-text">Posted by</span> <span class="author vcard"><a class="url fn n" href="https://www.ratemycollegecoaches.com/author/thurman-foreman/">Thurman Foreman</a></span></span>    </div>
+    <div class="text"><p>Unreasonable amounts of praise have been given to Amanda Nunes as a result of her legacy as the 145lb and 135lb champion.  Now that she has been dethroned, a number of ears may be open for sober evaluation. Her KO power is very impressive. She can grapple a bit, but she gets tired and punching [&hellip;]</p>
+</div>
+  </div>
+</article><!-- #post-76174 -->        </div>
+          </div>
+
+    <div class="pagination">
+          </div>
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+</div></div><footer class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter">
+    <div class="wrap">
+        <div class="site-footer-left">
+            <a href="https://www.ratemycollegecoaches.com"><img
+                    src="https://www.ratemycollegecoaches.com/wp-content/themes/ratemycollege/images/logo-footer.png" /></a>
+        </div>
+        <div class="site-footer-right">
+            <div class="site-footer-right-above">
+                                <a href="https://twitter.com/_Unfnshed" target="_blank" title="Twitter"><i class="fa fa-twitter"
+                        aria-hidden="true"></i></a>
+                                  <a href="https://www.instagram.com/_unfnshed/" target="_blank" title="Instagram"><i class="fa fa-instagram"
+                        aria-hidden="true"></i></a>
+                                  <a href="https://www.facebook.com/ratemycollegecoaches" target="_blank" title="Facebook"><i class="fa fa-facebook"
+                        aria-hidden="true"></i></a>
+                            </div>
+            <div class="site-footer-right-below">
+                <nav class="nav-secondary" aria-label="Secondary"><div class="wrap"><ul id="menu-footer-menu" class="menu genesis-nav-menu menu-secondary"><li id="menu-item-58419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58419"><a href="/site-guidelines/#t-0"><span >Terms of Use</span></a></li>
+<li id="menu-item-58420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58420"><a href="/site-guidelines/#t-1"><span >Privacy Policy</span></a></li>
+<li id="menu-item-58421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58421"><a href="/site-guidelines/#t-2"><span >Site Guidelines</span></a></li>
+<li id="menu-item-58422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58422"><a href="/site-guidelines/#t-3"><span >Copyright Compliance</span></a></li>
+</ul></div></nav>            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9G4DBM" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->    <!-- Meta Pixel Event Code -->
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+          eval(event.detail.apiResponse.fb_pxl_code);
+        }
+      }, false );
+    </script>
+    <!-- End Meta Pixel Event Code -->
+    <div id='fb-pxl-ajax-code'></div><script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1704154361" id="swv-js" defer></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.ratemycollegecoaches.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1704154361" id="contact-form-7-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.2" id="jquery-ui-menu-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/dist/dom-ready.min.js?ver=392bdd43726760d1f3ca" id="wp-dom-ready-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/dist/a11y.min.js?ver=7032343a947cfccf5608" id="wp-a11y-js" defer></script>
+<script type="text/javascript" id="jquery-ui-autocomplete-js-extra">
+/* <![CDATA[ */
+var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.2" id="jquery-ui-autocomplete-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-content/cache/min/1/wp-content/plugins/rmc-functionality/inc/js/scripts.js?ver=1704154361" id="rmc-script-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-content/cache/min/1/npm/slick-carousel@1.8.1/slick/slick.min.js?ver=1704154361" id="rmc-slick-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-content/cache/min/1/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-contact-form-7-tracker.js?ver=1704154361" id="gtm4wp-contact-form-7-tracker-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.ratemycollegecoaches.com/wp-content/cache/min/1/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1704154361" id="gtm4wp-form-move-tracker-js" defer></script>
+</body></html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1705923053 -->
